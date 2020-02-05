@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
  * @since 2020-02-05
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode()
 @Accessors(chain = true)
 public class Role{
 
