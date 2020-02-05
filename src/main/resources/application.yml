@@ -1,0 +1,14 @@
+#配置myBatis-plus
+mybatis-plus:
+  mapper-locations: classpath:/model/mapper/*Mapper.xml
+  global-config:
+    db-config:
+      logic-delete-value: isDelete #全局逻辑删除字段
+
+#配置Datasource
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/FreeSeed?serverTimezone=GMT%2B8
+    username: root
+    password: 990312lycLYC
