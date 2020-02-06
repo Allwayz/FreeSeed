@@ -7,8 +7,28 @@ mybatis-plus:
 
 #配置Datasource
 spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/FreeSeed?serverTimezone=GMT%2B8
     username: root
     password: 990312lycLYC
+
+
+  freemarker:
+    content-type: text/html
+    cache: false
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    request-context-attribute: req
+    charset: UTF-8
+    check-template-location: true
+    expose-request-attributes: false
+    expose-session-attributes: false
+
+  resources:
+    static-locations: classpath:/resources/,classpath:/static/,classpath:/templates/

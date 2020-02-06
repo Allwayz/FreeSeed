@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
+import java.util.Scanner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -29,9 +30,16 @@ public class TestRoleServiceImpl {
 
     @Test
     public void testInsertRole(){
-        System.out.println("----------Select All-------------");
+        Scanner input = new Scanner(System.in);
+
+
+        System.out.println("----------Insert-------------");
+
         Role role = new Role();
-        role.setRoleDesc("admin");
+        System.out.println("Please enter Role Description");
+        String roleDesc = input.next();
+        role.setRoleDesc(roleDesc);
+
         roleMapper.insert(role);
         System.out.println("Insert Successfully");
 
