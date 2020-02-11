@@ -3,7 +3,10 @@ mybatis-plus:
   mapper-locations: classpath:/model/mapper/*Mapper.xml
   global-config:
     db-config:
-      logic-delete-value: isDelete #全局逻辑删除字段
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
 
 #配置Datasource
 spring:
