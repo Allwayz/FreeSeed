@@ -5,12 +5,13 @@
 >   FreeSeed是一款现代化的，独立的，学生管理系统。
 
 <p align="center">
-    <a href="#"><img alt="JDK" src="https://img.shields.io/badge/JDK-1.8-yellow.svg?style=flat-square"/></a>
-    <a href="https://github.com/halo-dev/halo/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/halo-dev/halo.svg?style=flat-square"/></a>
-    <a href="https://github.com/halo-dev/halo/releases"><img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/halo-dev/halo/total.svg?style=flat-square"></a>
-    <a href="https://hub.docker.com/r/ruibaby/halo"><img alt="Docker pulls" src="https://img.shields.io/docker/pulls/ruibaby/halo?style=flat-square"></a>
-    <a href="https://github.com/halo-dev/halo/commits"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/halo-dev/halo.svg?style=flat-square"></a>
-    <a href="https://travis-ci.org/halo-dev/halo"><img alt="Travis CI" src="https://img.shields.io/travis/halo-dev/halo.svg?style=flat-square"/></a>
+    <a href = "https://docs.oracle.com/javase/8/docs/"><img src="https://badgen.net/badge/JDK/1.8/yellow"></a>
+    <a href = "https://github.com/Allwayz/FreeSeed"><img src="https://badgen.net/github/forks/Allwayz/FreeSeed"></a>
+    <a href = "https://github.com/Allwayz/FreeSeed/issues"><img src="https://badgen.net/github/issues/Allwayz/FreeSeed"></a>
+	<a href = "https://github.com/Allwayz/FreeSeed/releases"><img src="https://badgen.net/github/release/Allwayz/FreeSeed"></a>
+    <a href = "https://github.com/Allwayz/FreeSeed/tags"><img src="https://badgen.net/github/tag/Allwayz/FreeSeed"></a>
+    <a href = "https://github.com/Allwayz/FreeSeed"><img src="https://badgen.net/github/commits/Allwayz/FreeSeed"></a>
+    <img src="https://badgen.net/github/last-commit/Allwayz/FreeSeed/v0.1.1-Beta">
 </p>
 
 ------
@@ -19,7 +20,7 @@
 
 **FreeSeed是一款现代化的，独立的，学生管理系统。**
 
->   [官网](https://allwayz.github.io/) | 社区 | QQ交流群 | 电报交流群 | 电报频道
+>   [官网](https://allwayz.github.io/) | 社区 | [Email](2584491610@qq.com) | Telegram
 
 数据库文件！本地 `mysql` 
 
