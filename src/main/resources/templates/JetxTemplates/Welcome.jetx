@@ -42,12 +42,12 @@
                     </tr>
                     <tr>
                         <td style="padding-bottom:20px; border-bottom: 1px solid #e7e8e7; font-family: arial; font-size: 16px; font-weight: bold; color: #464646;">
-                            Verify your email to start using FreeSeed
+                            Hi ${username} !  Welcome to FreeSeed!
                         </td>
                     </tr>
                     <tr>
                         <td style="padding-top:20px;font-size:14px;line-height:1.75;color:#74767a;">
-                            Welcome to FreeSeed! Just verify your email to get started. We do this as a security precaution to verify your credentials.
+                            After receiving this email, you can already log in to FreeSeed system！
                         </td>
                     </tr>
                     <tr>
@@ -56,13 +56,11 @@
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <b>Authorization code:</b>
+                                        <b></b>
                                     </td>
                                     <td align="center" bgcolor="#1A74BA" style="padding: 8px 20px;  border-bottom: 2px solid #005b8c; box-shadow: 0 2px 0 #e1e1de;">
                                         <a href="" style="display: block; font-family: arial; font-size: 14px; font-weight: bold; text-decoration: none; color: #FFFFFF; line-height: 1;" rel="noopener" target="_blank">
-
-                                            ${code}
-
+                                            If not, please ignore
                                         </a>
                                     </td>
                                 </tr>
