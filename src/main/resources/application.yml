@@ -26,7 +26,7 @@ spring:
     content-type: text/html
     cache: false
     suffix: .ftl
-    template-loader-path: classpath:/templates/
+    template-loader-path: classpath:/templates/FreeMarkerTemplates/
     request-context-attribute: req
     charset: UTF-8
     check-template-location: true
@@ -35,3 +35,4 @@ spring:
 
   resources:
     static-locations: classpath:/resources/,classpath:/static/,classpath:/templates/
+

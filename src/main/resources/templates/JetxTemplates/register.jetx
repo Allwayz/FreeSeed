@@ -1,0 +1,12 @@
+<div>
+	<p>Dear <b>${username}</b>, 欢迎加入 FreeSeed !</p>
+  	<p>When you receive the Email, you can already log in.</p>
+  	<p>Please click the link to log in to the homepage：  ${url}</p>
+  	<p>If you also want to apply for administrator rights, you can contact the administrator： ${email}</p>
+  	<p>我们对您产生的不便，深表歉意。</p>
+  	<p>hope you enjoy FreeSeed!</p>
+  	<p></p>
+  	<p>-----------------------</p>
+  	<p></p>
+  	<p>(这是一封自动产生的email，请勿回复。)</p>
+</div>

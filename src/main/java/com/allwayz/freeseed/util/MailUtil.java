@@ -2,10 +2,14 @@ package com.allwayz.freeseed.util;
 
 import io.github.biezhi.ome.OhMyEmail;
 import io.github.biezhi.ome.SendMailException;
+import jetbrick.template.JetEngine;
+import jetbrick.template.JetTemplate;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.web.multipart.support.StandardMultipartHttpServletRequest;
 
+import javax.security.auth.login.Configuration;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
@@ -20,6 +24,7 @@ import static io.github.biezhi.ome.OhMyEmail.SMTP_QQ;
 public class MailUtil {
     // 该邮箱修改为你需要测试的邮箱地址
     private static final String TO_EMAIL = "allwayzio@126.com";
+
 
     @Before
     public void before() {
@@ -71,49 +76,52 @@ public class MailUtil {
         Assert.assertTrue(true);
     }
 
-//    @Test
-//    public void testPebble() throws IOException, PebbleException, SendMailException {
-//        PebbleEngine engine = new PebbleEngine.Builder().build();
-//        PebbleTemplate compiledTemplate = engine.getTemplate("register.html");
-//
-//        Map<String, Object> context = new HashMap<String, Object>();
-//        context.put("username", "biezhi");
-//        context.put("email", "admin@biezhi.me");
-//
-//        Writer writer = new StringWriter();
-//        compiledTemplate.evaluate(writer, context);
-//
-//        String output = writer.toString();
-//        System.out.println(output);
-//
-//        OhMyEmail.subject("这是一封测试Pebble模板邮件")
-//                .from("小姐姐的邮箱")
-//                .to(TO_EMAIL)
-//                .html(output)
-//                .send();
-//        Assert.assertTrue(true);
-//    }
-//
-//    @Test
-//    public void testJetx() throws SendMailException {
-//        JetEngine   engine   = JetEngine.create();
-//        JetTemplate template = engine.getTemplate("/register.jetx");
-//
-//        Map<String, Object> context = new HashMap<String, Object>();
-//        context.put("username", "biezhi");
-//        context.put("email", "admin@biezhi.me");
-//        context.put("url", "<a href='http://biezhi.me'>https://biezhi.me/active/asdkjajdasjdkaweoi</a>");
-//
-//        StringWriter writer = new StringWriter();
-//        template.render(context, writer);
-//        String output = writer.toString();
-//        System.out.println(output);
-//
-//        OhMyEmail.subject("这是一封测试Jetx模板邮件")
-//                .from("小姐姐的邮箱")
-//                .to(TO_EMAIL)
-//                .html(output)
-//                .send();
-//        Assert.assertTrue(true);
-//    }
+    @Test
+    public void testJetx() throws SendMailException {
+        JetEngine engine = JetEngine.create();
+        JetTemplate template = engine.getTemplate("/templates/JetxTemplates/register.jetx");
+
+        Map<String, Object> context = new HashMap<String, Object>();
+        context.put("username", "User");
+        context.put("email", "2584491610@qq.com");
+        context.put("url", "<a href='https://allwayz.github.io/FreeSeedDemo/'>https://allwayz.github.io/FreeSeedDemo/</a>");
+
+        StringWriter writer = new StringWriter();
+        template.render(context, writer);
+        String output = writer.toString();
+        System.out.println(output);
+
+        OhMyEmail.subject("这是一封测试Jetx的邮件")
+                .from("Allwayz")
+                .to(TO_EMAIL)
+                .html(output)
+                .send();
+        Assert.assertTrue(true);
+        System.out.println("Send...");
+    }
+
+    @Test
+    public void testJJJ() throws SendMailException {
+        JetEngine engine = JetEngine.create();
+        JetTemplate template = engine.getTemplate("/templates/JetxTemplates/AuthorizationCode.jetx");
+
+        String code = AuthorizationCodeUtil.randomCode();
+        Map<String, Object> context = new HashMap<String, Object>();
+        context.put("code", code);
+
+        StringWriter writer = new StringWriter();
+        template.render(context, writer);
+        String output = writer.toString();
+        System.out.println(output);
+
+        OhMyEmail.subject("这是一封测试Jetx验证码的邮件")
+                .from("Allwayz")
+                .to(TO_EMAIL)
+                .html(output)
+                .send();
+        Assert.assertTrue(true);
+        System.out.println(code);
+        System.out.println("Send...");
+    }
+
 }
