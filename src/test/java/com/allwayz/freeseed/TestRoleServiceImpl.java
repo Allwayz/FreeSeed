@@ -2,6 +2,7 @@ package com.allwayz.freeseed;
 
 import com.allwayz.freeseed.model.entity.Role;
 import com.allwayz.freeseed.model.mapper.RoleMapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,11 @@ public class TestRoleServiceImpl {
 
         roleMapper.insert(role);
         System.out.println("Insert Successfully");
+    }
 
+    @Test
+    public void testCount(){
+        System.out.println(roleMapper.selectCount(new QueryWrapper<Role>()));
     }
 
 }

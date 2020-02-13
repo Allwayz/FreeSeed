@@ -1,6 +1,7 @@
 package com.allwayz.freeseed.model.mapper;
 
 import com.allwayz.freeseed.model.entity.Role;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -12,5 +13,4 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2020-02-05
  */
 public interface RoleMapper extends BaseMapper<Role> {
-
 }
