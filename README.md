@@ -38,7 +38,7 @@
  Target Server Version : 80019
  File Encoding         : 65001
 
- Date: 13/02/2020 14:31:11
+ Date: 14/02/2020 23:18:48
 */
 
 SET NAMES utf8mb4;
@@ -513,7 +513,14 @@ CREATE TABLE `classroom` (
   `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `is_delete` tinyint DEFAULT '0',
   PRIMARY KEY (`classroom_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of classroom
+-- ----------------------------
+BEGIN;
+INSERT INTO `classroom` VALUES (1, 'First', 'SE-101', 30, '2020-02-14 13:06:18', '2020-02-14 13:06:18', 0);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for enrollment
@@ -546,7 +553,22 @@ CREATE TABLE `major` (
   `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `is_delete` tinyint DEFAULT '0',
   PRIMARY KEY (`major_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of major
+-- ----------------------------
+BEGIN;
+INSERT INTO `major` VALUES (1, 'MC_50601', 'History of Architecture', NULL, '2020-02-14 15:00:21', '2020-02-14 15:00:21', 0);
+INSERT INTO `major` VALUES (2, 'MC_51001', 'Anatomy: The Life of a Cell', NULL, '2020-02-14 15:02:46', '2020-02-14 15:02:46', 0);
+INSERT INTO `major` VALUES (3, 'MC_50101', 'Introduction to Psychology', NULL, '2020-02-14 15:05:09', '2020-02-14 15:05:09', 0);
+INSERT INTO `major` VALUES (4, 'MC_50201', 'Public Economics', NULL, '2020-02-14 15:20:34', '2020-02-14 15:20:34', 0);
+INSERT INTO `major` VALUES (5, 'MC_50202', 'Game Theory', NULL, '2020-02-14 15:21:19', '2020-02-14 15:21:19', 0);
+INSERT INTO `major` VALUES (6, 'MC_50102', 'Introduction to Philosophy', NULL, '2020-02-14 15:27:07', '2020-02-14 15:27:07', 0);
+INSERT INTO `major` VALUES (7, 'MC_50103', 'Philosophy and Science of Human Nature', NULL, '2020-02-14 15:27:32', '2020-02-14 15:27:32', 0);
+INSERT INTO `major` VALUES (8, 'MC_50602', 'International System in the 20th Century', NULL, '2020-02-14 15:30:00', '2020-02-14 15:30:00', 0);
+INSERT INTO `major` VALUES (9, 'MC_50603', 'Ancient Greece:Myth,Art,War', NULL, '2020-02-14 15:32:37', '2020-02-14 15:32:37', 0);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for major_dtl
@@ -566,7 +588,14 @@ CREATE TABLE `major_dtl` (
   KEY `classroom_id` (`classroom_id`),
   CONSTRAINT `classroom_id` FOREIGN KEY (`classroom_id`) REFERENCES `classroom` (`classroom_id`),
   CONSTRAINT `major_id` FOREIGN KEY (`major_id`) REFERENCES `major` (`major_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of major_dtl
+-- ----------------------------
+BEGIN;
+INSERT INTO `major_dtl` VALUES (1, 'SS', 2021, '2020-02-14 17:19:39', '2020-02-14 17:19:39', 0, 1, 1);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for national_dtl
@@ -879,11 +908,11 @@ CREATE TABLE `user` (
 -- Records of user
 -- ----------------------------
 BEGIN;
-INSERT INTO `user` VALUES (1, '666666', 'allwayzio@126.com', '2020-02-13 11:50:32', '2020-02-13 11:50:32', 0, 1, NULL);
-INSERT INTO `user` VALUES (2, '123456', 'allwayzio@126.com', '2020-02-13 12:11:01', '2020-02-13 12:11:01', 0, 1, NULL);
+INSERT INTO `user` VALUES (1, '666666', 'allwayzio@126.com', '2020-02-13 11:50:32', '2020-02-13 11:50:32', 0, 1, 1);
+INSERT INTO `user` VALUES (2, '123456', 'allwayzx@126.com', '2020-02-13 12:11:01', '2020-02-13 12:11:01', 0, 1, NULL);
 INSERT INTO `user` VALUES (3, '123456', '2584491610@qq.com', '2020-02-13 12:14:10', '2020-02-13 12:14:10', 0, 1, NULL);
-INSERT INTO `user` VALUES (4, '123456', '2584491610@qq.com', '2020-02-13 12:13:45', '2020-02-13 12:13:45', 0, 1, NULL);
-INSERT INTO `user` VALUES (5, '123456', 'allwayzio@126.com', '2020-02-13 12:14:34', '2020-02-13 12:14:34', 0, 1, NULL);
+INSERT INTO `user` VALUES (4, '123456', '2584491610x@qq.com', '2020-02-13 12:13:45', '2020-02-13 12:13:45', 0, 1, NULL);
+INSERT INTO `user` VALUES (5, '123456', 'allwayzioxx@126.com', '2020-02-13 12:14:34', '2020-02-13 12:14:34', 0, 1, NULL);
 COMMIT;
 
 -- ----------------------------
@@ -906,10 +935,28 @@ CREATE TABLE `user_dtl` (
   KEY `user_id` (`user_id`),
   KEY `city_dtl_id` (`city_dtl_id`),
   CONSTRAINT `city_dtl_id` FOREIGN KEY (`city_dtl_id`) REFERENCES `city_dtl` (`city_dtl_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of user_dtl
+-- ----------------------------
+BEGIN;
+INSERT INTO `user_dtl` VALUES (1, 'Allwayz', 'Liu', '1999-03-12', '12345678901', NULL, '2020-02-14 17:44:57', '2020-02-14 17:44:57', 0, 1, 122);
+COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
 
 ```
+
+### FreeSeed Request Method
+| 实验功能                             | 请求URI | 请求方式 |
+| ------------------------------------ | ------- | -------- |
+| Select ALL                       | emps    | GET      |
+| Select One(pass to Edit Page)           | emp/1   | GET      |
+| pass to add Page                         | emp     | GET      |
+| Add                              | emp     | POST     |
+| pass to Edit Page | emp/1   | GET      |
+| update                             | emp     | PUT      |
+| delete                             | emp/1   | DELETE   |
 

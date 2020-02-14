@@ -1,39 +1,32 @@
 #配置myBatis-plus
 mybatis-plus:
-  mapper-locations: classpath:/model/mapper/*Mapper.xml
+  mapper-locations: classpath:com/allwayz/freeseed/model/mapper/*Mapper.xml
   global-config:
     db-config:
+      #逻辑删除
       logic-delete-field: isDelete
       logic-delete-value: 1
       logic-not-delete-value: 0
   configuration:
+    #Show Sql on Terminal log
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-#配置Datasource
+
 spring:
   mvc:
     view:
-      prefix: /
-      suffix: .html
+      #配置jsp文件
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
 
+  #配置Datasource
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/FreeSeed?serverTimezone=GMT%2B8
     username: root
     password: 990312lycLYC
 
-
-  freemarker:
-    content-type: text/html
-    cache: false
-    suffix: .ftl
-    template-loader-path: classpath:/templates/FreeMarkerTemplates/
-    request-context-attribute: req
-    charset: UTF-8
-    check-template-location: true
-    expose-request-attributes: false
-    expose-session-attributes: false
-
+  #静态资源路径
   resources:
     static-locations: classpath:/resources/,classpath:/static/,classpath:/templates/
 

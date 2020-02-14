@@ -38,8 +38,16 @@ public class TestUserServiceImpl {
     @Test
     public void testUpdate() {
         User user = userMapper.selectById(1);
-        user.setUserPassword("666666");
+        user.setUserDtlId(1);
+        //user.setUserPassword("666666");
         userMapper.updateById(user);
         System.out.println(user);
     }
+
+    //TODO fix mail send bug and test sign up function
+    public void testUserRegister() {
+
+    }
+
+
 }

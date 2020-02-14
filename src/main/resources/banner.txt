@@ -13,4 +13,4 @@ ${AnsiColor.BLUE}
  =========|_|==============|___/=/_/_/_/
 
  ${AnsiColor.BRIGHT_YELLOW}
- ::: Spring-Boot ${spring-boot.version}     ::: FreeSeed (version:${application.formatted-version})
+ ::: Spring-Boot ${spring-boot.version}     ::: FreeSeed (version:${application.version})

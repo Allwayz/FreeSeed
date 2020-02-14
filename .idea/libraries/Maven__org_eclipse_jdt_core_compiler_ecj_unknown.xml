@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.jdt.core.compiler:ecj:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/core/compiler/ecj/unknown/ecj-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/core/compiler/ecj/unknown/ecj-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/core/compiler/ecj/unknown/ecj-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
