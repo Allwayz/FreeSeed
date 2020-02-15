@@ -42,15 +42,15 @@
 		</style>
 	</head>
 
-	<body>
-		<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" style="background-image: url('asserts/img/background.png')">
-			<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/templates/dashboard.html">
-				<img src="../static/asserts/img/FreeSeed.png" alt="" width="130">
+	<body style="background-image: url('asserts/img/background.png')">
+		<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+			<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard">
+				<img src="/asserts/img/FreeSeed_Color.png" width="130">
 			</a>
 			<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
 			<ul class="navbar-nav px-3">
 				<li class="nav-item text-nowrap">
-					<a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">Sign out</a>
+					<a class="nav-link" href="index">Sign out</a>
 				</li>
 			</ul>
 		</nav>
@@ -193,11 +193,20 @@
 						<h1 class="h2">Dashboard</h1>
 						<div class="btn-toolbar mb-2 mb-md-0">
 							<div class="btn-group mr-2">
-								<button class="btn btn-sm btn-outline-secondary">Share</button>
+								<button class="btn btn-sm btn-outline-secondary" >Share</button>
 								<button class="btn btn-sm btn-outline-secondary">Export</button>
 							</div>
 							<button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+					<rect x="3" y="4" width="18" height="18" rx="2" ry="2">
+					</rect>
+					<line x1="16" y1="2" x2="16" y2="6">
+					</line>
+					<line x1="8" y1="2" x2="8" y2="6">
+					</line>
+					<line x1="3" y1="10" x2="21" y2="10">
+					</line>
+				</svg>
                 This week
               </button>
 						</div>

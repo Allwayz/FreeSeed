@@ -92,4 +92,10 @@ public class MailUtil {
         MailUtil.sendWelcomeEmail(email,username);
     }
 
+    @Test
+    public void testAuthorizationCode() throws SendMailException {
+        String email = "allwayzio@126.com";
+        MailUtil.sendAuthorizationCodeEmail(email);
+    }
+
 }

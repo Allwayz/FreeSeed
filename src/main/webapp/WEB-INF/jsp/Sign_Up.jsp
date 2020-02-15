@@ -31,11 +31,10 @@ background-attachment: fixed; background-size: cover">
     <div>
         <form class="form-signin" action="dashboard">
             <h1 class="h3 mb-3 font-weight-normal">Sign Up Right Now!</h1>
-
-            <!--Email-->
-            <input type="text" class="form-control" id="email" placeholder="Email" required="" autofocus="">
             <!--Email Validation-->
-            <form id="validate" action="">
+            <form id="validate" action="sendAuCode" method="get">
+                <!--Email-->
+                <input type="text" class="form-control" id="email" placeholder="Email" required="" autofocus="">
                 <div>
                     <input class="form-control" style="width: auto;display: inline" type="text"placeholder="Authorization Code" name="AuCode">
                     <input class="btn btn-lg btn-primary btn-block" style="display: inline;width: 90px" id="getCode" name="getCode" type="button" value="Send"  autocomplete ="off"/>

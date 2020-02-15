@@ -17,7 +17,7 @@
 <body class="text-center" style="background-image: url('asserts/img/background.png')">
 <div>
     <img class="mb-4" src="asserts/img/FreeSeed.png" alt="" width="500">
-    <form class="form-signin" action="dashboard">
+    <form class="form-signin" action="dashboard" method="post">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label class="sr-only">Username</label>
         <input type="email" class="form-control" name="email" placeholder="Email" required="" autofocus="">
