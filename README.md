@@ -13,16 +13,43 @@
     <img src="https://badgen.net/github/last-commit/Allwayz/FreeSeed/master">
 	<img src="https://badgen.net/github/license/Allwayz/FreeSeed">
 </p>
-
 ------
 
-## 简介
+[TOC]
+
+### 简介
 
 **FreeSeed是一款现代化的，独立的，学生管理系统。**
 
 >   [官网](https://allwayz.github.io/) | 社区 | [Email](2584491610@qq.com) | Telegram
 
-数据库文件！本地 `mysql` 
+
+
+
+### FreeSeed Request Method
+| 实验功能                             | 请求URI | 请求方式 |
+| ------------------------------------ | ------- | -------- |
+| Select ALL                       | emps    | GET      |
+| Select One(pass to Edit Page)           | emp/1   | GET      |
+| pass to add Page                         | emp     | GET      |
+| Add                              | emp     | POST     |
+| pass to Edit Page | emp/1   | GET      |
+| update                             | emp     | PUT      |
+| delete                             | emp/1   | DELETE   |
+
+### 接口文档
+|web interface | Param | Return | Mathod|
+|--------------|-------|-------|--------|
+|roleList|null|JSON|get|
+|cityList|null|JSON|get|
+|addRole|role_desc|void|post|
+|addUser|email,password,role|void|post|
+
+
+
+------
+
+### 数据库文件！本地 `mysql` 
 
 ```sql
 /*
@@ -38,7 +65,7 @@
  Target Server Version : 80019
  File Encoding         : 65001
 
- Date: 14/02/2020 23:18:48
+ Date: 16/02/2020 04:59:15
 */
 
 SET NAMES utf8mb4;
@@ -874,7 +901,7 @@ CREATE TABLE `role` (
   `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `is_delete` tinyint DEFAULT '0',
   PRIMARY KEY (`role_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of role
@@ -882,6 +909,7 @@ CREATE TABLE `role` (
 BEGIN;
 INSERT INTO `role` VALUES (1, 'admin', '2020-02-05 10:32:01', '2020-02-05 10:32:01', 0);
 INSERT INTO `role` VALUES (2, 'Student', '2020-02-09 16:47:52', '2020-02-09 16:47:52', 0);
+INSERT INTO `role` VALUES (3, 'teacher', '2020-02-16 04:27:28', '2020-02-16 04:27:28', 0);
 COMMIT;
 
 -- ----------------------------
@@ -902,7 +930,7 @@ CREATE TABLE `user` (
   KEY `user_dtl_id` (`user_dtl_id`),
   CONSTRAINT `role_id` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`),
   CONSTRAINT `user_dtl_id` FOREIGN KEY (`user_dtl_id`) REFERENCES `user_dtl` (`user_dtl_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of user
@@ -913,6 +941,7 @@ INSERT INTO `user` VALUES (2, '123456', 'allwayzx@126.com', '2020-02-13 12:11:01
 INSERT INTO `user` VALUES (3, '123456', '2584491610@qq.com', '2020-02-13 12:14:10', '2020-02-13 12:14:10', 0, 1, NULL);
 INSERT INTO `user` VALUES (4, '123456', '2584491610x@qq.com', '2020-02-13 12:13:45', '2020-02-13 12:13:45', 0, 1, NULL);
 INSERT INTO `user` VALUES (5, '123456', 'allwayzioxx@126.com', '2020-02-13 12:14:34', '2020-02-13 12:14:34', 0, 1, NULL);
+INSERT INTO `user` VALUES (6, '123456', '374615181@qq.com', '2020-02-16 04:37:28', '2020-02-16 04:37:28', 0, 1, NULL);
 COMMIT;
 
 -- ----------------------------
@@ -946,17 +975,6 @@ COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
-
 ```
 
-### FreeSeed Request Method
-| 实验功能                             | 请求URI | 请求方式 |
-| ------------------------------------ | ------- | -------- |
-| Select ALL                       | emps    | GET      |
-| Select One(pass to Edit Page)           | emp/1   | GET      |
-| pass to add Page                         | emp     | GET      |
-| Add                              | emp     | POST     |
-| pass to Edit Page | emp/1   | GET      |
-| update                             | emp     | PUT      |
-| delete                             | emp/1   | DELETE   |
 
