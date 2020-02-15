@@ -31,7 +31,7 @@ public class TestController {
      * @return
      */
     @ResponseBody
-    @RequestMapping("/add")
+    @RequestMapping("/addRole")
     public String addROles(String roleDesc){
 //        Role role = new Role();
 //        role.setRoleDesc(roleDesc);
