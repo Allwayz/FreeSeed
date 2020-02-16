@@ -20,6 +20,7 @@
 ### 简介
 
 **FreeSeed是一款现代化的，独立的，学生管理系统。**
+[websiteDemo](https://allwayz.github.io/FreeSeedDemo)
 
 >   [官网](https://allwayz.github.io/) | 社区 | [Email](2584491610@qq.com) | Telegram
 
