@@ -38,7 +38,7 @@
 | delete                             | emp/1   | DELETE   |
 
 ### 接口文档
-|web interface | Param | Return | Mathod|
+|web interface | Param | Return | Method|
 |--------------|-------|-------|--------|
 |roleList|null|JSON|get|
 |cityList|null|JSON|get|
