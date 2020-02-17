@@ -67,7 +67,7 @@
 
 [![](https://badgen.net/github/license/Allwayz/FreeSeed)](https://github.com/Allwayz/FreeSeed/blob/master/LICENSE)
 
->   FreeSeed使用GPL-v3.0协议开源，请遵守开源协议。
+>   FreeSeed使用Apache-v2.0协议开源，请遵守开源协议。
 
 ------
 
