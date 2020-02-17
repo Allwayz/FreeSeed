@@ -1,9 +1,11 @@
 package com.allwayz.freeseed;
 
 import com.allwayz.freeseed.model.entity.CityDtl;
+import com.allwayz.freeseed.model.entity.NationalDtl;
 import com.allwayz.freeseed.model.entity.Role;
 import com.allwayz.freeseed.model.entity.User;
 import com.allwayz.freeseed.model.mapper.CityDtlMapper;
+import com.allwayz.freeseed.model.mapper.NationalDtlMapper;
 import com.allwayz.freeseed.model.mapper.RoleMapper;
 import com.allwayz.freeseed.model.mapper.UserMapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -26,6 +28,8 @@ public class TestController {
     private CityDtlMapper cityDtlMapper;
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private NationalDtlMapper nationalDtlMapper;
 
     /**
      *
@@ -95,6 +99,12 @@ public class TestController {
         List<CityDtl> cityDtlList = cityDtlMapper.selectList(new QueryWrapper<CityDtl>());
         cityDtlList.forEach(System.out::println);
         return cityDtlList;
+    }
+
+
+    @RequestMapping("/testAPI")
+    public String testAPI() {
+        return "testAPI";
     }
 
 }

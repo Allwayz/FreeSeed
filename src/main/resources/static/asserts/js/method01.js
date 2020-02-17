@@ -33,7 +33,7 @@ var current = {
 })();
 
 /*根据所选的省份来显示城市列表*/
-function showCity(obj) {
+function showCitys(obj) {
     var val = obj.options[obj.selectedIndex].value;
     if (val != current.prov) {
         current.prov = val;

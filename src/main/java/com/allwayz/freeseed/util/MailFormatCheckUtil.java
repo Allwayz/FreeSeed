@@ -2,6 +2,7 @@ package com.allwayz.freeseed.util;
 
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,6 +34,7 @@ public class MailFormatCheckUtil {
         String email = "2584491610@qq.com";
         System.out.println(MailFormatCheckUtil.checkEmailFormat(email));
 
-    };
+    }
+
 
 }

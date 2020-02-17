@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.allwayz.freeseed.model.entity.NationalDtl" %><%--
     Document   : Sign_Up
     Created on : 2050-2-14, 18:26:30
     Author     : Allwayz
@@ -19,7 +19,82 @@
 
     <link rel="stylesheet" href="asserts/location/style.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="asserts/js/jquery-3.4.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type:"GET",
+                url:"locationSelect",
+                dataType: "json",
+                success: function (data) {
+                    var str ="<div><select>"
+                    for(i=0;i<data.length;i++){
+                        str +="<option value='"+data[i].nationalDtlName+"'>"+data[i].nationalDtlName+"</option>";
+                    }
+                    str +="</select></div>"
+                    $("#nation").html(str)
+                }
+            });
+            $.ajax({
+                type:"GET",
+                url:"roleLoad",
+                dataType: "json",
+                success: function (data) {
+                    var str ="<div><select>"
+                    for(i=0;i<data.length;i++){
+                        str +="<option value='"+data[i].roleDesc+"'>"+data[i].roleDesc+"</option>";
+                    }
+                    str +="</select></div>"
+                    $("#roleDescComboBox").html(str)
+                }
+            })
+        })
+
+        function showProvince(nationInput) {
+            $.ajax({
+                type: "GET",
+                url: "showProvince?national="+nationInput,
+                dataType: "json",
+                success: function (data) {
+                    var str ="<div><select>"
+                    for(i=0;i<data.length;i++){
+                        str +="<option value='"+data[i].provinceDtlName+"'>"+data[i].provinceDtlName+"</option>";
+                    }
+                    str +="</select></div>"
+                    $("#province").html(str);
+                }
+            });
+        }
+
+        function showCity(provinceInput) {
+            $.ajax({
+                type: "GET",
+                url: "showCity?province="+provinceInput,
+                dataType: "json",
+                success: function (data) {
+                    var str ="<div><select>"
+                    for(i=0;i<data.length;i++){
+                        str +="<option value='"+data[i].cityDtlName+"'>"+data[i].cityDtlName+"</option>";
+                    }
+                    str +="</select></div>"
+                    $("#city").html(str);
+                }
+            });
+        }
+
+        function sendAuCode() {
+            var a = $("#email").val;
+            $.ajax({
+                type: "GET",
+                url: "sendAuCode"+a,
+                dataType: "json",
+                success: function (data) {
+                    alert("Send")
+                }
+            });
+        }
+    </script>
 </head>
 
 <body class="text-center" style="background-image: url('asserts/img/background.png');background-repeat: no-repeat;
@@ -32,24 +107,19 @@ background-attachment: fixed; background-size: cover">
         <form class="form-signin" action="dashboard">
             <h1 class="h3 mb-3 font-weight-normal">Sign Up Right Now!</h1>
             <!--Email Validation-->
-            <form id="validate" action="sendAuCode" method="get">
+            <form id="validate">
                 <!--Email-->
                 <input type="text" class="form-control" id="email" placeholder="Email" required="" autofocus="">
                 <div>
                     <input class="form-control" style="width: auto;display: inline" type="text"placeholder="Authorization Code" name="AuCode">
-                    <input class="btn btn-lg btn-primary btn-block" style="display: inline;width: 90px" id="getCode" name="getCode" type="button" value="Send"  autocomplete ="off"/>
+                    <input class="btn btn-lg btn-primary btn-block" style="display: inline;width: 90px" id="getCode" name="getCode" type="button" value="Send"  autocomplete ="off" onclick="sendAuCode()"/>
                 </div>
             </form>
             <!--Password-->
             <input type="password" class="form-control" placeholder="Password" required="">
             <!--Role-->
-            <select id="Role_Desc_ComboBox" class="form-control" style="display: inline">
-                <option value ="student">student</option>
-                <option value="staff">staff</option>
-                <option value="security">security</option>
-                <option value ="lecturer">lecturer</option>
-                <option value ="Public_Relation">Public_Relation</option>
-                <option value ="admin">admin</option>
+            <select id="roleDescComboBox" class="form-control" style="display: inline">
+
             </select>
             <br><br>
 
@@ -57,25 +127,22 @@ background-attachment: fixed; background-size: cover">
                 <fieldset>
                     <legend>Detail</legend>
                     <div>
-                        <label for="addr-show">您选择的是：
-                            <input type="text" value="" id="addr-show">
-                        </label>
-                        <br/>
-
-                        <!--省份选择-->
-                        <select id="prov" onchange="showCity(this)">
-                            <option>=请选择省份=</option>
-
+                        <select id="nation" onchange="showProvince(this.options[this.options.selectedIndex].value)">
+                            <option id="nationDtl">
+                                Nation
+                            </option>
                         </select>
 
-                        <!--城市选择-->
-                        <select id="city" onchange="showCountry(this)">
-                            <option>=请选择城市=</option>
+                        <select id="province" onchange="showCity(this.options[this.options.selectedIndex].value)">
+                            <option>
+                                Province
+                            </option>
                         </select>
 
-                        <!--县区选择-->
-                        <select id="country" onchange="selecCountry(this)">
-                            <option>=请选择县区=</option>
+                        <select id="city">
+                            <option>
+                                City
+                            </option>
                         </select>
                     </div>
                     <br>

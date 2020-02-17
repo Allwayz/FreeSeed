@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +18,7 @@
 <div>
     <img class="mb-4" src="asserts/img/FreeSeed.png" alt="" width="500">
     <form class="form-signin" action="dashboard" method="post">
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in!</h1>
         <label class="sr-only">Username</label>
         <input type="email" class="form-control" name="email" placeholder="Email" required="" autofocus="">
         <label class="sr-only">Password</label>

@@ -1,8 +1,11 @@
 package com.allwayz.freeseed;
 
+import com.allwayz.freeseed.model.entity.NationalDtl;
 import com.allwayz.freeseed.model.entity.ProvinceDtl;
+import com.allwayz.freeseed.model.mapper.NationalDtlMapper;
 import com.allwayz.freeseed.model.mapper.ProvinceDtlMapper;
 import com.allwayz.freeseed.util.StringToArrayUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -17,6 +21,8 @@ public class TestProvinceDtlServiceImpl {
 
     @Autowired
     private ProvinceDtlMapper provinceDtlMapper;
+    @Autowired
+    private NationalDtlMapper nationalDtlMapper;
 
     /**
      * china
@@ -41,5 +47,14 @@ public class TestProvinceDtlServiceImpl {
     @Test
     public void testSelect(){
         System.out.println(provinceDtlMapper.selectById(3).toString());
+    }
+
+    @Test
+    public void showProvince(){
+        String national = "China";
+        NationalDtl nationalDtl = nationalDtlMapper.selectOne(new QueryWrapper<NationalDtl>().eq("national_dtl_name",national));
+
+        List<ProvinceDtl> provinceDtlList = provinceDtlMapper.selectList(new QueryWrapper<ProvinceDtl>().eq("national_dtl_id",nationalDtl.getNationalDtlId()));
+        provinceDtlList.forEach(System.out::println);
     }
 }
