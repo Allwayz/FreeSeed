@@ -59,7 +59,8 @@
 
 [下载地址](https://allwayz-blog-1259174617.cos.ap-shanghai.myqcloud.com/FreeSeed/FreeSeed.sql)
 
-
+### `Oracle`版本（可能有bug）
+[下载地址](https://allwayz-blog-1259174617.cos.ap-shanghai.myqcloud.com/FreeSeed/FreeSeed_Oracle.sql)
 
 ------
 
