@@ -189,4 +189,8 @@ public class TestController {
         return "testPublicPart";
     }
 
+    @RequestMapping("/LogConsole/websocket")
+    public String logConsole(){
+        return "LogConsole";
+    }
 }

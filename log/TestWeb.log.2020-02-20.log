@@ -21,3 +21,631 @@
 2020-02-20 01:53:08.590 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2020-02-20 01:53:08.591 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2020-02-20 01:53:08.598 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-20 02:33:58.511 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3457 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 02:33:58.513 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 02:33:58.829 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 02:33:59.117 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 02:33:59.122 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 02:33:59.122 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 02:33:59.248 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 02:33:59.253 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 02:33:59.253 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 718 ms
+2020-02-20 02:33:59.317 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:33:59.320 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:33:59.675 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:33:59.692 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:33:59.781 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 02:33:59.851 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 02:33:59.852 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:33:59.852 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 02:33:59.856 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 02:33:59.885 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 02:33:59.888 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.651 seconds (JVM running for 2.259)
+2020-02-20 02:34:00.859 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 02:34:01.856 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 02:34:02.860 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 02:34:03.859 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 02:34:04.858 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 02:34:05.856 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 02:34:06.858 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 02:34:07.860 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 02:34:08.858 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 02:34:09.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 02:34:10.860 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出12
+2020-02-20 02:34:11.857 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出13
+2020-02-20 02:34:12.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出14
+2020-02-20 02:34:13.860 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出15
+2020-02-20 02:34:14.857 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出16
+2020-02-20 02:34:15.860 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出17
+2020-02-20 02:34:16.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出18
+2020-02-20 02:34:17.857 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出19
+2020-02-20 02:34:18.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出20
+2020-02-20 02:34:19.605 [http-nio-8990-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 02:34:19.605 [http-nio-8990-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 02:34:19.610 [http-nio-8990-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-02-20 02:34:19.856 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出21
+2020-02-20 02:34:20.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出22
+2020-02-20 02:34:21.857 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出23
+2020-02-20 02:34:22.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出24
+2020-02-20 02:34:23.859 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出25
+2020-02-20 02:34:24.859 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出26
+2020-02-20 02:34:25.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出27
+2020-02-20 02:34:26.860 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出28
+2020-02-20 02:34:27.856 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出29
+2020-02-20 02:34:28.860 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出30
+2020-02-20 02:34:29.856 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出31
+2020-02-20 02:34:30.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出32
+2020-02-20 02:34:31.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出33
+2020-02-20 02:34:32.859 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出34
+2020-02-20 02:34:33.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出35
+2020-02-20 02:34:34.860 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出36
+2020-02-20 02:34:35.857 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出37
+2020-02-20 02:34:36.857 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出38
+2020-02-20 02:34:37.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出39
+2020-02-20 02:34:38.856 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出40
+2020-02-20 02:34:39.860 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出41
+2020-02-20 02:34:40.860 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出42
+2020-02-20 02:34:41.856 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出43
+2020-02-20 02:34:42.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出44
+2020-02-20 02:34:43.857 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出45
+2020-02-20 02:34:44.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出46
+2020-02-20 02:34:45.857 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出47
+2020-02-20 02:34:46.856 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出48
+2020-02-20 02:34:47.861 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出49
+2020-02-20 02:34:48.859 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出50
+2020-02-20 02:34:49.858 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出51
+2020-02-20 02:34:50.807 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 02:34:50.807 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:34:50.808 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 02:34:50.809 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:34:50.809 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:34:50.811 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:34:50.811 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:35:40.937 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3484 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 02:35:40.940 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 02:35:41.298 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 02:35:41.590 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 02:35:41.595 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 02:35:41.595 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 02:35:41.710 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 02:35:41.715 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 02:35:41.715 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 749 ms
+2020-02-20 02:35:41.768 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:35:41.770 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:35:42.179 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:35:42.199 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:35:42.305 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 02:35:42.386 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 02:35:42.386 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:35:42.387 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 02:35:42.391 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 02:35:42.426 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 02:35:42.429 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.765 seconds (JVM running for 2.192)
+2020-02-20 02:35:43.394 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 02:35:44.073 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 02:35:44.074 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 02:35:44.077 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-20 02:35:44.394 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 02:35:45.394 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 02:35:46.394 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 02:35:47.394 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 02:35:48.394 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 02:35:49.395 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 02:35:50.394 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 02:35:51.394 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 02:35:52.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 02:35:53.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出12
+2020-02-20 02:35:54.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出13
+2020-02-20 02:35:55.393 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出14
+2020-02-20 02:35:56.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出15
+2020-02-20 02:35:57.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出16
+2020-02-20 02:35:58.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出17
+2020-02-20 02:35:59.395 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出18
+2020-02-20 02:36:00.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出19
+2020-02-20 02:36:01.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出20
+2020-02-20 02:36:02.395 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出21
+2020-02-20 02:36:03.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出22
+2020-02-20 02:36:04.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出23
+2020-02-20 02:36:05.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出24
+2020-02-20 02:36:06.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出25
+2020-02-20 02:36:07.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出26
+2020-02-20 02:36:08.393 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出27
+2020-02-20 02:36:09.394 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出28
+2020-02-20 02:36:10.395 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出29
+2020-02-20 02:36:11.393 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出30
+2020-02-20 02:36:12.392 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出31
+2020-02-20 02:36:13.392 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出32
+2020-02-20 02:36:13.815 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 02:36:13.815 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:36:13.815 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 02:36:13.816 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:36:13.816 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:36:13.819 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:36:13.820 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:37:02.558 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3495 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 02:37:02.560 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 02:37:02.880 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 02:37:03.160 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 02:37:03.166 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 02:37:03.166 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 02:37:03.295 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 02:37:03.301 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 02:37:03.301 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 718 ms
+2020-02-20 02:37:03.360 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:37:03.363 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:37:03.718 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:37:03.735 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:37:03.825 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 02:37:03.904 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 02:37:03.905 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:37:03.905 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 02:37:03.909 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 02:37:03.938 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 02:37:03.941 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.65 seconds (JVM running for 2.078)
+2020-02-20 02:37:04.913 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 02:37:05.913 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 02:37:06.883 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 02:37:06.883 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 02:37:06.887 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-02-20 02:37:06.912 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 02:37:07.913 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 02:37:08.912 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 02:37:09.914 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 02:37:10.911 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 02:37:11.910 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 02:37:12.912 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 02:37:13.912 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 02:37:14.913 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出12
+2020-02-20 02:37:15.911 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出13
+2020-02-20 02:37:16.912 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出14
+2020-02-20 02:37:17.724 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 02:37:17.724 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:37:17.724 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 02:37:17.725 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:37:17.726 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:37:17.728 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:37:17.728 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:38:28.403 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3505 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 02:38:28.405 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 02:38:28.712 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 02:38:29.032 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 02:38:29.038 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 02:38:29.039 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 02:38:29.166 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 02:38:29.172 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 02:38:29.172 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 745 ms
+2020-02-20 02:38:29.231 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:38:29.234 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:38:29.636 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:38:29.653 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:38:29.738 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 02:38:29.807 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 02:38:29.808 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:38:29.808 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 02:38:29.812 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 02:38:29.840 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 02:38:29.843 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.705 seconds (JVM running for 2.254)
+2020-02-20 02:38:30.813 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 02:38:31.812 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 02:38:32.813 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 02:38:33.517 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 02:38:33.517 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 02:38:33.521 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-02-20 02:38:33.816 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 02:38:34.814 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 02:38:35.814 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 02:38:36.814 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 02:38:37.816 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 02:38:38.815 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 02:38:39.812 [MessageBroker-10] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 02:38:40.814 [MessageBroker-10] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出12
+2020-02-20 02:38:41.813 [MessageBroker-10] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出13
+2020-02-20 02:38:42.816 [MessageBroker-10] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出14
+2020-02-20 02:38:43.815 [MessageBroker-10] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出15
+2020-02-20 02:38:44.815 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出16
+2020-02-20 02:38:45.815 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出17
+2020-02-20 02:38:46.817 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出18
+2020-02-20 02:38:47.737 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 02:38:47.738 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:38:47.738 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 02:38:47.739 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:38:47.739 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:38:47.742 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:38:47.742 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:39:22.346 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3517 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 02:39:22.348 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 02:39:26.586 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3523 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 02:39:26.588 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 02:39:26.918 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 02:39:27.210 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 02:39:27.217 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 02:39:27.217 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 02:39:27.353 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 02:39:27.358 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 02:39:27.359 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 746 ms
+2020-02-20 02:39:27.420 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:39:27.423 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:39:27.759 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:39:27.774 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:39:27.869 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 02:39:27.944 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 02:39:27.944 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:39:27.944 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 02:39:27.948 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 02:39:27.979 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 02:39:27.982 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.671 seconds (JVM running for 2.081)
+2020-02-20 02:39:28.952 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 02:39:29.952 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 02:39:30.002 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 02:39:30.003 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 02:39:30.006 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-20 02:39:30.952 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 02:39:31.951 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 02:39:32.951 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 02:39:33.951 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 02:39:34.952 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 02:39:35.952 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 02:39:36.951 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 02:39:37.952 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 02:39:38.952 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出12
+2020-02-20 02:39:39.953 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出13
+2020-02-20 02:39:40.951 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出14
+2020-02-20 02:39:41.951 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出15
+2020-02-20 02:39:42.951 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出16
+2020-02-20 02:39:43.951 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出17
+2020-02-20 02:39:44.949 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出18
+2020-02-20 02:39:45.952 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出19
+2020-02-20 02:39:46.952 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出20
+2020-02-20 02:39:47.951 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出21
+2020-02-20 02:39:48.951 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出22
+2020-02-20 02:39:49.951 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出23
+2020-02-20 02:39:50.951 [MessageBroker-4] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出24
+2020-02-20 02:39:51.441 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 02:39:51.442 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:39:51.442 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 02:39:51.443 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:39:51.443 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:39:51.446 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:39:51.447 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:41:46.876 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3536 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 02:41:46.877 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 02:41:47.211 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 02:41:47.469 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 02:41:47.474 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 02:41:47.474 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 02:41:47.597 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 02:41:47.603 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 02:41:47.603 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 702 ms
+2020-02-20 02:41:47.660 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:41:47.664 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:41:48.023 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:41:48.039 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:41:48.128 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 02:41:48.201 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 02:41:48.202 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:41:48.202 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 02:41:48.206 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 02:41:48.235 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 02:41:48.237 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.635 seconds (JVM running for 2.226)
+2020-02-20 02:41:49.210 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 02:41:50.211 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 02:41:51.209 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 02:41:52.208 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 02:41:53.209 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 02:41:53.814 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 02:41:53.814 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 02:41:53.817 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-20 02:41:54.206 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 02:41:55.208 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 02:41:56.210 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 02:41:57.209 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 02:41:58.210 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 02:41:59.209 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出12
+2020-02-20 02:42:00.210 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出13
+2020-02-20 02:42:01.210 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出14
+2020-02-20 02:42:02.207 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出15
+2020-02-20 02:42:02.535 [http-nio-8990-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-20 02:42:02.760 [http-nio-8990-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-20 02:42:03.208 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出16
+2020-02-20 02:42:04.209 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出17
+2020-02-20 02:42:05.206 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出18
+2020-02-20 02:42:06.207 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出19
+2020-02-20 02:42:07.210 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出20
+2020-02-20 02:42:07.386 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 02:42:07.387 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:42:07.387 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 02:42:07.388 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:42:07.389 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:42:07.390 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-20 02:42:07.398 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-20 02:42:07.398 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:42:07.398 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:43:58.470 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3555 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 02:43:58.472 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 02:43:58.787 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 02:43:59.062 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 02:43:59.068 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 02:43:59.068 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 02:43:59.211 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 02:43:59.217 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 02:43:59.217 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 721 ms
+2020-02-20 02:43:59.279 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:43:59.283 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:43:59.634 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:43:59.651 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:43:59.738 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 02:43:59.805 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 02:43:59.805 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:43:59.806 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 02:43:59.809 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 02:43:59.838 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 02:43:59.840 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.665 seconds (JVM running for 2.265)
+2020-02-20 02:44:00.814 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 02:44:01.659 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 02:44:01.659 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 02:44:01.662 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-20 02:44:01.813 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 02:44:02.810 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 02:44:03.809 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 02:44:04.809 [MessageBroker-4] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 02:44:05.813 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 02:44:06.812 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 02:44:07.810 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 02:44:08.813 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 02:44:09.809 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 02:44:10.814 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出12
+2020-02-20 02:44:11.811 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出13
+2020-02-20 02:44:12.813 [MessageBroker-4] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出14
+2020-02-20 02:44:13.814 [MessageBroker-4] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出15
+2020-02-20 02:44:14.813 [MessageBroker-4] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出16
+2020-02-20 02:44:15.814 [MessageBroker-4] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出17
+2020-02-20 02:44:16.812 [MessageBroker-4] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出18
+2020-02-20 02:44:17.810 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出19
+2020-02-20 02:44:18.813 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出20
+2020-02-20 02:44:19.814 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出21
+2020-02-20 02:44:20.814 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出22
+2020-02-20 02:44:21.812 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出23
+2020-02-20 02:44:22.810 [MessageBroker-12] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出24
+2020-02-20 02:44:23.814 [MessageBroker-12] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出25
+2020-02-20 02:44:24.810 [MessageBroker-12] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出26
+2020-02-20 02:44:25.812 [MessageBroker-12] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出27
+2020-02-20 02:44:26.814 [MessageBroker-12] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出28
+2020-02-20 02:44:27.814 [MessageBroker-9] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出29
+2020-02-20 02:44:28.813 [MessageBroker-9] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出30
+2020-02-20 02:44:29.814 [MessageBroker-9] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出31
+2020-02-20 02:44:30.635 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 02:44:30.635 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:44:30.636 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 02:44:30.638 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:44:30.639 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:44:30.641 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:44:30.641 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:46:27.667 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3578 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 02:46:27.669 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 02:46:28.005 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 02:46:28.250 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 02:46:28.255 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 02:46:28.255 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 02:46:28.375 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 02:46:28.381 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 02:46:28.381 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 688 ms
+2020-02-20 02:46:28.437 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:46:28.439 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:46:28.797 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:46:28.812 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:46:28.896 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 02:46:28.964 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 02:46:28.964 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:46:28.964 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 02:46:28.968 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 02:46:28.996 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 02:46:28.999 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.615 seconds (JVM running for 2.217)
+2020-02-20 02:46:29.972 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 02:46:30.968 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 02:46:31.969 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 02:46:32.972 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 02:46:33.970 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 02:46:34.970 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 02:46:35.972 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 02:46:36.970 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 02:46:37.969 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 02:46:38.970 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 02:46:39.108 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 02:46:39.108 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 02:46:39.112 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-20 02:46:39.970 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出12
+2020-02-20 02:46:40.972 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出13
+2020-02-20 02:46:41.972 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出14
+2020-02-20 02:46:42.970 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出15
+2020-02-20 02:46:43.970 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出16
+2020-02-20 02:46:44.970 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出17
+2020-02-20 02:46:45.972 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出18
+2020-02-20 02:46:46.972 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出19
+2020-02-20 02:46:47.972 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出20
+2020-02-20 02:46:48.972 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出21
+2020-02-20 02:46:49.970 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出22
+2020-02-20 02:46:50.972 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出23
+2020-02-20 02:46:51.884 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 02:46:51.884 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:46:51.884 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 02:46:51.885 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:46:51.885 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:46:51.888 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:46:51.888 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:47:20.785 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3590 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 02:47:20.787 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 02:47:21.201 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 02:47:21.502 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 02:47:21.508 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 02:47:21.508 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 02:47:21.651 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 02:47:21.657 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 02:47:21.658 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 849 ms
+2020-02-20 02:47:21.725 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 02:47:21.728 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:47:22.108 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:47:22.127 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:47:22.230 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 02:47:22.316 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 02:47:22.317 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:47:22.317 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 02:47:22.321 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 02:47:22.350 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 02:47:22.353 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.816 seconds (JVM running for 2.238)
+2020-02-20 02:47:23.144 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 02:47:23.144 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 02:47:23.148 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-02-20 02:47:23.326 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 02:47:24.324 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 02:47:25.323 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 02:47:26.325 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 02:47:27.324 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 02:47:28.322 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 02:47:29.326 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 02:47:29.441 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 02:47:29.441 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 02:47:29.441 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 02:47:29.442 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 02:47:29.443 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 02:47:29.445 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 02:47:29.445 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 03:04:57.127 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3649 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 03:04:57.130 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 03:04:57.460 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 03:04:57.735 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 03:04:57.740 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 03:04:57.740 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 03:04:57.860 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 03:04:57.866 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 03:04:57.866 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 713 ms
+2020-02-20 03:04:57.921 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 03:04:57.924 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 03:04:58.277 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 03:04:58.292 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 03:04:58.385 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 03:04:58.454 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 03:04:58.455 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 03:04:58.455 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 03:04:58.459 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 03:04:58.487 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 03:04:58.491 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.628 seconds (JVM running for 2.186)
+2020-02-20 03:04:59.459 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 03:05:00.460 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 03:05:01.463 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 03:05:02.461 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 03:05:03.461 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 03:05:04.461 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 03:05:05.462 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 03:05:06.460 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 03:05:07.459 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 03:05:08.462 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 03:05:09.461 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出12
+2020-02-20 03:05:10.461 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出13
+2020-02-20 03:05:11.459 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出14
+2020-02-20 03:05:12.464 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出15
+2020-02-20 03:05:13.461 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出16
+2020-02-20 03:05:14.462 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出17
+2020-02-20 03:05:15.463 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出18
+2020-02-20 03:05:16.464 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出19
+2020-02-20 03:05:17.464 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出20
+2020-02-20 03:05:17.971 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 03:05:17.972 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 03:05:17.975 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-20 03:05:18.459 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出21
+2020-02-20 03:05:19.461 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出22
+2020-02-20 03:05:20.463 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出23
+2020-02-20 03:05:21.459 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出24
+2020-02-20 03:05:22.459 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出25
+2020-02-20 03:05:23.460 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出26
+2020-02-20 03:05:24.460 [MessageBroker-9] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出27
+2020-02-20 03:05:24.971 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 03:05:24.972 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 03:05:24.972 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 03:05:24.973 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 03:05:24.974 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 03:05:24.976 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 03:05:24.976 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 03:08:28.607 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3664 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 03:08:28.610 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 03:08:28.954 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 03:08:29.243 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 03:08:29.248 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 03:08:29.249 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 03:08:29.382 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 03:08:29.388 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 03:08:29.388 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 751 ms
+2020-02-20 03:08:29.450 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 03:08:29.454 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 03:08:29.818 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 03:08:29.835 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 03:08:29.927 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 03:08:30.001 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 03:08:30.001 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 03:08:30.002 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 03:08:30.005 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 03:08:30.035 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 03:08:30.038 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.732 seconds (JVM running for 2.361)
+2020-02-20 03:08:31.008 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 03:08:32.008 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 03:08:33.010 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 03:08:34.010 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 03:08:35.005 [MessageBroker-5] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 03:08:36.010 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 03:08:36.301 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 03:08:36.301 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 03:08:36.305 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-02-20 03:08:37.008 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 03:08:38.007 [MessageBroker-7] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 03:08:39.009 [MessageBroker-8] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 03:08:40.009 [MessageBroker-8] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 03:08:41.007 [MessageBroker-8] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出12
+2020-02-20 03:08:42.008 [MessageBroker-8] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出13
+2020-02-20 03:08:43.007 [MessageBroker-8] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出14
+2020-02-20 03:08:44.009 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出15
+2020-02-20 03:08:44.229 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 03:08:44.229 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 03:08:44.229 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 03:08:44.231 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 03:08:44.231 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 03:08:44.234 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 03:08:44.235 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 03:14:21.714 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Starting FreeseedApplication on AllwayzdeiMac.local with PID 3682 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-20 03:14:21.716 [main] INFO  com.allwayz.freeseed.FreeseedApplication - No active profile set, falling back to default profiles: default
+2020-02-20 03:14:22.039 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-20 03:14:22.333 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8990 (http)
+2020-02-20 03:14:22.338 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-20 03:14:22.339 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-20 03:14:22.475 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-20 03:14:22.481 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-20 03:14:22.482 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 741 ms
+2020-02-20 03:14:22.544 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-02-20 03:14:22.548 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 03:14:22.906 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 03:14:22.926 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2020-02-20 03:14:23.026 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [templates/index.html]
+2020-02-20 03:14:23.117 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Starting...
+2020-02-20 03:14:23.117 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 03:14:23.118 [main] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Started.
+2020-02-20 03:14:23.122 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出1
+2020-02-20 03:14:23.152 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-20 03:14:23.155 [main] INFO  com.allwayz.freeseed.FreeseedApplication - Started FreeseedApplication in 1.736 seconds (JVM running for 2.342)
+2020-02-20 03:14:24.122 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出2
+2020-02-20 03:14:24.362 [http-nio-8990-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-20 03:14:24.362 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-20 03:14:24.366 [http-nio-8990-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-02-20 03:14:25.124 [MessageBroker-3] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出3
+2020-02-20 03:14:26.125 [MessageBroker-2] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出4
+2020-02-20 03:14:27.122 [MessageBroker-1] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出5
+2020-02-20 03:14:28.122 [MessageBroker-4] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出6
+2020-02-20 03:14:29.127 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出7
+2020-02-20 03:14:30.123 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出8
+2020-02-20 03:14:31.123 [MessageBroker-6] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出9
+2020-02-20 03:14:32.123 [MessageBroker-10] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出10
+2020-02-20 03:14:33.126 [MessageBroker-10] INFO  com.allwayz.freeseed.FreeseedApplication - 测试日志输出11
+2020-02-20 03:14:33.307 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopping...
+2020-02-20 03:14:33.307 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-02-20 03:14:33.308 [SpringContextShutdownHook] INFO  o.s.m.simp.broker.SimpleBrokerMessageHandler - Stopped.
+2020-02-20 03:14:33.309 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2020-02-20 03:14:33.309 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2020-02-20 03:14:33.312 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2020-02-20 03:14:33.312 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
