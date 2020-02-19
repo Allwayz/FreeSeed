@@ -3,6 +3,7 @@ package com.allwayz.freeseed.JSPController;
 import com.allwayz.freeseed.model.entity.Role;
 import com.allwayz.freeseed.model.mapper.RoleMapper;
 import com.allwayz.freeseed.util.AuthorizationCodeUtil;
+import com.allwayz.freeseed.util.MailFormatCheckUtil;
 import com.allwayz.freeseed.util.MailUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.github.biezhi.ome.SendMailException;
@@ -26,14 +27,26 @@ public class SignUpController{
     @Autowired
     private RoleMapper roleMapper;
 
+    /**
+     *
+     * @param email
+     * @return
+     * @throws SendMailException
+     */
     @RequestMapping(value = "/sendAuCode")
-    public void sendCode(String email) throws SendMailException {
+    public String sendCode(String email) throws SendMailException {
         System.out.println(email);
         if(email.isEmpty()){
-            System.out.println("Email is Enpty");
+            return "Email is Enpty";
         }
         else {
-            MailUtil.sendAuthorizationCodeEmail(email);
+            if(MailFormatCheckUtil.checkEmailFormat(email)){
+                MailUtil.sendAuthorizationCodeEmail(email);
+                return "send...";
+            }else {
+                return "Not a Email address...";
+            }
+
         }
     }
 

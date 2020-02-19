@@ -38,7 +38,7 @@ public class IndexController {
      * @param password
      * @return
      */
-    @RequestMapping("/dashboard")
+    @RequestMapping("/loginRequest")
     public String dashboard(String email,String password){
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
         if(user.getUserPassword().equals(password)){

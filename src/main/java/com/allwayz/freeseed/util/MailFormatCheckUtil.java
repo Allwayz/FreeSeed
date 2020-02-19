@@ -13,7 +13,7 @@ public class MailFormatCheckUtil {
      * @param content
      * @return
      */
-    private static boolean checkEmailFormat(String content){
+    public static boolean checkEmailFormat(String content){
         /*
          * " \w"：匹配字母、数字、下划线。等价于'[A-Za-z0-9_]'。
          * "|"  : 或的意思，就是二选一

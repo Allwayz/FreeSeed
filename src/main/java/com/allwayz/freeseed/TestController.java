@@ -1,13 +1,7 @@
 package com.allwayz.freeseed;
 
-import com.allwayz.freeseed.model.entity.CityDtl;
-import com.allwayz.freeseed.model.entity.NationalDtl;
-import com.allwayz.freeseed.model.entity.Role;
-import com.allwayz.freeseed.model.entity.User;
-import com.allwayz.freeseed.model.mapper.CityDtlMapper;
-import com.allwayz.freeseed.model.mapper.NationalDtlMapper;
-import com.allwayz.freeseed.model.mapper.RoleMapper;
-import com.allwayz.freeseed.model.mapper.UserMapper;
+import com.allwayz.freeseed.model.entity.*;
+import com.allwayz.freeseed.model.mapper.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,6 +24,8 @@ public class TestController {
     private UserMapper userMapper;
     @Autowired
     private NationalDtlMapper nationalDtlMapper;
+    @Autowired
+    private MajorMapper majorMapper;
 
     /**
      *
@@ -57,9 +53,9 @@ public class TestController {
      */
     @ResponseBody
     @RequestMapping("/addUser")
-    public void addUser(String password,String email,String role){
+    public String addUser(String password,String email,String role){
         if(password.isEmpty()||email.isEmpty()||role.isEmpty()){
-            System.out.println("Input variable");
+            return "Input variable";
         }else{
 
             User user = new User();
@@ -68,13 +64,83 @@ public class TestController {
                     .setRoleId(
                             roleMapper.selectOne(new QueryWrapper<Role>().eq("role_desc",role)).getRoleId());
             userMapper.insert(user);
+            return "You are Sign Up";
         }
     }
 
+    /**
+     *
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/addUserDtl")
+    public String addUserDtl(){
+        return null;
+    }
+
+    /**
+     *
+     * @param majorDepartment
+     * @param majorName
+     * @return
+     */
     @RequestMapping("/addMajor")
     @ResponseBody
-    public void addMajor(){
-
+    public String addMajor(String majorDepartment,String majorName){
+        Major major = new Major();
+        major.setMajorName(majorName);
+        /*
+         * 哲学        经济学     法学  教育学       文学     历史学   力学     工学         农学        医学     军事学             管理学     艺术学
+         * Philosophy,Economics,Law,Education,Literature,History,Science,Engineering,Agriculture,Medicine,Military Science,Management, Art
+         * 501xx      502xx    503xx  504xx      505xx     506xx   507xx   508xx        509xx      510xx    511xx            512xx       513xx
+         */
+        String majorCodePrefix;
+        switch(majorDepartment){
+            case "Philosophy" :
+                majorCodePrefix = "MC_501";
+                break;
+            case "Economics" :
+                majorCodePrefix = "MC_502";
+                break;
+            case "Law" :
+                majorCodePrefix = "MC_503";
+                break;
+            case "Education" :
+                majorCodePrefix = "MC_504";
+                break;
+            case "Literature" :
+                majorCodePrefix = "MC_505";
+                break;
+            case "History" :
+                majorCodePrefix = "MC_506";
+                break;
+            case "Science" :
+                majorCodePrefix = "MC_507";
+                break;
+            case "Engineering" :
+                majorCodePrefix = "MC_508";
+                break;
+            case "Agriculture" :
+                majorCodePrefix = "MC_509";
+                break;
+            case "Medicine" :
+                majorCodePrefix = "MC_510";
+                break;
+            case "Military" :
+                majorCodePrefix = "MC_511";
+                break;
+            case "Management" :
+                majorCodePrefix = "MC_512";
+                break;
+            case "Art" :
+                majorCodePrefix = "MC_513";
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + majorName);
+        }
+            String i = Integer.toString(majorMapper.selectCount(new QueryWrapper<Major>().like("major_code",majorCodePrefix))+1);
+        major.setMajorCode(majorCodePrefix+i);
+        return null;
     }
 
     /**
@@ -101,10 +167,26 @@ public class TestController {
         return cityDtlList;
     }
 
+    @RequestMapping("/userList")
+    @ResponseBody
+    public List<User> userList(){
+        List<User> userList = userMapper.selectList(new QueryWrapper<User>());
+        return userList;
+    }
 
     @RequestMapping("/testAPI")
     public String testAPI() {
         return "testAPI";
+    }
+
+    @RequestMapping("/testServlet")
+    public String textServlet(){
+        return "testServlet";
+    }
+
+    @RequestMapping("/testPublicPart")
+    public String testPublicPart(){
+        return "testPublicPart";
     }
 
 }

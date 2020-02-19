@@ -24,6 +24,7 @@ public class TestRoleServiceImpl {
      */
     @Test
     public void testSelectAll(){
+
         System.out.println("----------Select All-------------");
         List<Role> roleList = roleMapper.selectList(null);
         roleList.forEach(System.out::println);

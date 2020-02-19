@@ -84,16 +84,31 @@
         }
 
         function sendAuCode() {
-            var a = $("#email").val;
+            var a = $("#email").val();
             $.ajax({
                 type: "GET",
-                url: "sendAuCode"+a,
+                url: "sendAuCode?email="+a,
                 dataType: "json",
                 success: function (data) {
                     alert("Send")
                 }
             });
         }
+
+        function Sign_UpFunction() {
+            var email = $("#email").val();
+            var password = $("#password").val();
+            var role = $("#roleDescComboBox").val();
+            $.ajax({
+               type: "POST",
+               url: "addUser?email="+email+"&password="+password+"&role="+role,
+                dataType: "json",
+                success: function (data) {
+                    alert("Go to Homepage to login!")
+                }
+            });
+        }
+
     </script>
 </head>
 
@@ -104,7 +119,7 @@ background-attachment: fixed; background-size: cover">
         <img class="mb-4" src="asserts/img/FreeSeed.png" alt="" width="500" style="margin-top: 300px">
     </div>
     <div>
-        <form class="form-signin" action="dashboard">
+        <form class="form-signin" action="">
             <h1 class="h3 mb-3 font-weight-normal">Sign Up Right Now!</h1>
             <!--Email Validation-->
             <form id="validate">
@@ -116,7 +131,8 @@ background-attachment: fixed; background-size: cover">
                 </div>
             </form>
             <!--Password-->
-            <input type="password" class="form-control" placeholder="Password" required="">
+            <input type="password" class="form-control" placeholder="Password" required="" id="password">
+
             <!--Role-->
             <select id="roleDescComboBox" class="form-control" style="display: inline">
 
@@ -152,7 +168,7 @@ background-attachment: fixed; background-size: cover">
                 </fieldset>
             </div>
             <br>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign Up</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="Sign_UpFunction()">Sign Up</button>
             <a href="/index" ><h6>Already Have Acount</h6></a>
             <p class="mt-5 mb-3 text-muted">© 1999 - ∞</p>
 

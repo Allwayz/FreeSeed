@@ -11,14 +11,14 @@ public class DashBoardController {
         return "list";
     }
 
-    @RequestMapping(value = "/test")
-    public String test(){
-        return "PublicSnippets/border";
-    }
 
     @RequestMapping(value = "/main")
     public String main(){
         return "mainPage";
     }
 
+    @RequestMapping(value = "/dashboard")
+    public String dashboard(){
+        return "dashboard";
+    }
 }
