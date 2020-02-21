@@ -31,5 +31,6 @@ spring:
     static-locations: classpath:/resources/,classpath:/static/,classpath:/templates/
 server:
   port: 8990
+
 logging:
   config: classpath:logback-spring.xml

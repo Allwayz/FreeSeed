@@ -22,6 +22,7 @@
     <!-- Custom styles for this template -->
     <link href="asserts/css/dashboard.css" rel="stylesheet">
     <script src="asserts/js/jquery-3.4.1.js"></script>
+
     <script src="asserts/js/listFunction.js"></script>
 
     <style type="text/css">
@@ -51,39 +52,6 @@
         }
     </style>
 
-    <script>
-        function clickUser() {
-            $.ajax({
-                type:"GET",
-                url: "userList",
-                dataType: "json",
-                success: function (data) {
-                    var str ="<div><table border=\"1\" align=\"center\">\n" +
-                        "        <tr>\n" +
-                        "            <th>#</th>\n" +
-                        "            <th>User</th>\n" +
-                        "            <th>Create time</th>\n" +
-                        "            <th>Update time</th>\n" +
-                        "        </tr>"
-
-                    for(i=0;i<data.length;i++){
-                        str +="<tr>\n" +
-                            "            <td>"+data[i].userId+"</td>\n" +
-                            "            <td>"+data[i].userEmail+"</a></td>\n" +
-                            "            <td>"+data[i].createTime+"</td>\n" +
-                            "            <td>"+data[i].updateTime+"</td>\n" +
-                            "        </tr>";
-                    }
-                    str +="</table></div>"
-                    $("#publicTbody").html(str);
-                    document.getElementById("tableName").innerHTML = document.getElementById("userType").innerHTML;
-                }
-            })
-        }
-    </script>
-
-
-
 </head>
 <body>
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
@@ -99,7 +67,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="clickUser()">
+                    <a class="nav-link" href="listPage?table=user">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                             <circle cx="9" cy="7" r="4"></circle>
@@ -110,7 +78,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">
+                    <a class="nav-link" href="listPage?table=major">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
                             <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
                             <polyline points="13 2 13 9 20 9"></polyline>
@@ -119,7 +87,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">
+                    <a class="nav-link" href="listPage?table=enrollment">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
                             <circle cx="9" cy="21" r="1"></circle>
                             <circle cx="20" cy="21" r="1"></circle>
@@ -146,6 +114,18 @@
                             <polyline points="2 12 12 17 22 12"></polyline>
                         </svg>
                         <span id="integrations">Integrations</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LogConsole">
+                        <img src="https://img.icons8.com/dotty/80/000000/log.png" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+                        <span>Log</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="workOrder">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/checklist.png" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+                        <span>Work Order</span>
                     </a>
                 </li>
             </ul>

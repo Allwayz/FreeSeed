@@ -69,7 +69,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" onclick="clickUser()">
+								<a class="nav-link" href="listPage?table=user">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
 										<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
 										<circle cx="9" cy="7" r="4"></circle>
@@ -80,7 +80,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">
+								<a class="nav-link" href="listPage?table=major">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
 										<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
 										<polyline points="13 2 13 9 20 9"></polyline>
@@ -89,7 +89,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">
+								<a class="nav-link" href="listPage?table=enrollment">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
 										<circle cx="9" cy="21" r="1"></circle>
 										<circle cx="20" cy="21" r="1"></circle>
@@ -105,7 +105,7 @@
 										<line x1="12" y1="20" x2="12" y2="4"></line>
 										<line x1="6" y1="20" x2="6" y2="14"></line>
 									</svg>
-									Reports
+									<span id="report">Reports</span>
 								</a>
 							</li>
 							<li class="nav-item">
@@ -115,7 +115,7 @@
 										<polyline points="2 17 12 22 22 17"></polyline>
 										<polyline points="2 12 12 17 22 12"></polyline>
 									</svg>
-									Integrations
+									<span id="integrations">Integrations</span>
 								</a>
 							</li>
 						</ul>
@@ -222,18 +222,18 @@
 		<!-- Bootstrap core JavaScript
     ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script type="text/javascript" src="../static/asserts/js/jquery-3.2.1.slim.min.js" ></script>
-		<script type="text/javascript" src="../static/asserts/js/popper.min.js" ></script>
-		<script type="text/javascript" src="../static/asserts/js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="asserts/js/popper.min.js"></script>
+	<script type="text/javascript" src="asserts/js/bootstrap.min.js"></script>
 
-		<!-- Icons -->
-		<script type="text/javascript" src="../static/asserts/js/feather.min.js" ></script>
-		<script>
-			feather.replace()
-		</script>
+	<!-- Icons -->
+	<script type="text/javascript" src="asserts/js/feather.min.js"></script>
+	<script>
+		feather.replace()
+	</script>
 
-		<!-- Graphs -->
-		<script type="text/javascript" src="../static/asserts/js/Chart.min.js" ></script>
+	<!-- Graphs -->
+	<script type="text/javascript" src="asserts/js/Chart.min.js"></script>
 		<script>
 			var ctx = document.getElementById("myChart");
 			var myChart = new Chart(ctx, {

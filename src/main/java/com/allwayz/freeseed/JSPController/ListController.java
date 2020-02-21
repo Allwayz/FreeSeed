@@ -31,26 +31,18 @@ public class ListController {
 
     /**
      *
+     * @param table
      * @return
      */
-    //@GetMapping(value = "/list?table=user")
-    public String userList(@RequestParam(value = "table") String table, Model model){
-        model.addAttribute("table",table);
-
-        return "list";
-    }
-
     @RequestMapping("/listPage")
     public ModelAndView showUser(String table){
-        //String message = "table";
-        ModelAndView modelAndView = new ModelAndView();
         List list;
         switch (table){
             case "user":
                 list = userMapper.selectList(new QueryWrapper<User>());
                 break;
             case "major":
-                list = majorMapper.selectList(new QueryWrapper<Major>());
+                list = majorMapper.selectList(new QueryWrapper<Major>().orderByAsc("major_code"));
                 break;
             case "enrollment":
                 list = enrollmentMapper.selectList(new QueryWrapper<Enrollment>());

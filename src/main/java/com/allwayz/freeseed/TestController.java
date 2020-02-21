@@ -26,6 +26,10 @@ public class TestController {
     private NationalDtlMapper nationalDtlMapper;
     @Autowired
     private MajorMapper majorMapper;
+    @Autowired
+    protected MajorDtlMapper majorDtlMapper;
+    @Autowired
+    private UserDtlMapper userDtlMapper;
 
     /**
      *
@@ -159,6 +163,18 @@ public class TestController {
      *
      * @return
      */
+    @RequestMapping("/majorList")
+    @ResponseBody
+    public List<Major> majorList() {
+        List<Major> majorList = majorMapper.selectList(new QueryWrapper<Major>());
+        majorList.forEach(System.out::println);
+        return majorList;
+    }
+
+    /**
+     *
+     * @return
+     */
     @RequestMapping("/cityList")
     @ResponseBody
     public List<CityDtl> cityDtlList() {
@@ -173,6 +189,27 @@ public class TestController {
         List<User> userList = userMapper.selectList(new QueryWrapper<User>());
         return userList;
     }
+
+    @RequestMapping("/checkUserDtl")
+    @ResponseBody
+    public UserDtl userDtlSelect(String input){
+        int i = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",input)).getUserId();
+        UserDtl userDtl = userDtlMapper.selectOne(new QueryWrapper<UserDtl>().eq("user_id",i));
+        return userDtl;
+    }
+
+    @RequestMapping("/checkMajorDtl")
+    @ResponseBody
+    public List<MajorDtl> majorDtlSelect(String input){
+        int i = majorMapper.selectOne(new QueryWrapper<Major>().eq("major_name",input)).getMajorId();
+        List<MajorDtl> majorDtlList = majorDtlMapper.selectList(new QueryWrapper<MajorDtl>().eq("major_id",i));
+        return majorDtlList;
+    }
+
+
+
+
+
 
     @RequestMapping("/testAPI")
     public String testAPI() {
@@ -189,8 +226,13 @@ public class TestController {
         return "testPublicPart";
     }
 
-    @RequestMapping("/LogConsole/websocket")
+    @RequestMapping("/LogConsole")
     public String logConsole(){
         return "LogConsole";
+    }
+
+    @RequestMapping("workOrder")
+    public String workOrder(){
+        return "workOrder";
     }
 }

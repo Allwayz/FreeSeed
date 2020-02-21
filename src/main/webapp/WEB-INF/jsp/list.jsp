@@ -16,6 +16,7 @@
 		<link href="asserts/css/dashboard.css" rel="stylesheet">
 		<script src="asserts/js/jquery-3.4.1.js"></script>
 
+		<script src="asserts/js/listFunction.js"></script>
 
 
 		<style type="text/css">
@@ -53,136 +54,78 @@
 		<div class="container-fluid">
 			<div class="row">
 				<%@ include file="jspTemplates/Side.jsp"%>
-
 				<!--TODO get data from database-->
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 					<h2 id="tableName">${requestScope.message}</h2>
-					<div id="publicTable" class="table-responsive">
-						<table class="table table-striped table-sm" id="publicTbody">
-							<thead>
+					<div class="table-responsive">
+						<table class="table table-striped table-sm">
+							<c:choose>
+							<%--用户表--%>
+							<c:when test="${requestScope.message == 'user'}">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>${requestScope.message}</th>
+										<th>updateTime</th>
+										<th>Role</th>
+									</tr>
+								</thead>
+								<tbody>
+									<c:forEach items="${tableMap}" var="node">
+										<tr>
+											<td>${node.userId}</td>
+											<td><span style="cursor:pointer" onclick="userDetailClick(this)">${node.userEmail}</span></td>
+											<td>${node.updateTime}</td>
+											<td>${node.roleId}</td>
+										</tr>
+									</c:forEach>
+								</tbody>
+							</c:when>
+							<%--科目表--%>
+							<c:when test="${requestScope.message == 'major'}">
+								<thead>
 								<tr>
 									<th>#</th>
-									<th>Header</th>
-
-									<th>Header</th>
-									<th>Header</th>
-									<th>Header</th>
+									<th>${requestScope.message}</th>
+									<th>Major Code</th>
+									<th>Status</th>
+									<th>updateTime</th>
 								</tr>
-							</thead>
-							<tbody>
+								</thead>
+								<tbody>
+								<c:forEach items="${tableMap}" var="node">
+									<tr>
+										<td>${node.majorId}</td>
+										<td><span style="cursor:pointer" onclick="majorDetailClick(this)">${node.majorName}</span></td>
+										<td>${node.majorCode}</td>
+										<td>${node.majorStatus}</td>
+										<td>${node.updateTime}</td>
+									</tr>
+								</c:forEach>
+								</tbody>
+							</c:when>
+							<%--用户学科--%>
+							<c:when test="${requestScope.message == 'enrollment'}">
+								<thead>
 								<tr>
-									<td>1,001</td>
-									<td>Lorem</td>
-									<td>ipsum</td>
-									<td>dolor</td>
-									<td>sit</td>
+									<th>#</th>
+									<th>Student</th>
+									<th>Major Detail</th>
+									<th>Create Time</th>
 								</tr>
-								<tr>
-									<td>1,002</td>
-									<td>amet</td>
-									<td>consectetur</td>
-									<td>adipiscing</td>
-									<td>elit</td>
-								</tr>
-								<tr>
-									<td>1,003</td>
-									<td>Integer</td>
-									<td>nec</td>
-									<td>odio</td>
-									<td>Praesent</td>
-								</tr>
-								<tr>
-									<td>1,003</td>
-									<td>libero</td>
-									<td>Sed</td>
-									<td>cursus</td>
-									<td>ante</td>
-								</tr>
-								<tr>
-									<td>1,004</td>
-									<td>dapibus</td>
-									<td>diam</td>
-									<td>Sed</td>
-									<td>nisi</td>
-								</tr>
-								<tr>
-									<td>1,005</td>
-									<td>Nulla</td>
-									<td>quis</td>
-									<td>sem</td>
-									<td>at</td>
-								</tr>
-								<tr>
-									<td>1,006</td>
-									<td>nibh</td>
-									<td>elementum</td>
-									<td>imperdiet</td>
-									<td>Duis</td>
-								</tr>
-								<tr>
-									<td>1,007</td>
-									<td>sagittis</td>
-									<td>ipsum</td>
-									<td>Praesent</td>
-									<td>mauris</td>
-								</tr>
-								<tr>
-									<td>1,008</td>
-									<td>Fusce</td>
-									<td>nec</td>
-									<td>tellus</td>
-									<td>sed</td>
-								</tr>
-								<tr>
-									<td>1,009</td>
-									<td>augue</td>
-									<td>semper</td>
-									<td>porta</td>
-									<td>Mauris</td>
-								</tr>
-								<tr>
-									<td>1,010</td>
-									<td>massa</td>
-									<td>Vestibulum</td>
-									<td>lacinia</td>
-									<td>arcu</td>
-								</tr>
-								<tr>
-									<td>1,011</td>
-									<td>eget</td>
-									<td>nulla</td>
-									<td>Class</td>
-									<td>aptent</td>
-								</tr>
-								<tr>
-									<td>1,012</td>
-									<td>taciti</td>
-									<td>sociosqu</td>
-									<td>ad</td>
-									<td>litora</td>
-								</tr>
-								<tr>
-									<td>1,013</td>
-									<td>torquent</td>
-									<td>per</td>
-									<td>conubia</td>
-									<td>nostra</td>
-								</tr>
-								<tr>
-									<td>1,014</td>
-									<td>per</td>
-									<td>inceptos</td>
-									<td>himenaeos</td>
-									<td>Curabitur</td>
-								</tr>
-								<tr>
-									<td>1,015</td>
-									<td>sodales</td>
-									<td>ligula</td>
-									<td>in</td>
-									<td>libero</td>
-								</tr>
-							</tbody>
+								</thead>
+								<tbody>
+								<c:forEach items="${tableMap}" var="node">
+									<tr>
+										<td>${node.userId}</td>
+										<td><span style="cursor:pointer" onclick="userDetailClick(this)">${node.userId}</span></td>
+										<td>${node.majorDtlId}</td>
+										<td>${node.createTime}</td>
+									</tr>
+								</c:forEach>
+								</tbody>
+							</c:when>
+							</c:choose>
 						</table>
 					</div>
 				</main>
@@ -192,18 +135,18 @@
 		<!-- Bootstrap core JavaScript
     ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script type="text/javascript" src="../static/asserts/js/jquery-3.2.1.slim.min.js"></script>
-		<script type="text/javascript" src="../static/asserts/js/popper.min.js"></script>
-		<script type="text/javascript" src="../static/asserts/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js"></script>
+		<script type="text/javascript" src="asserts/js/popper.min.js"></script>
+		<script type="text/javascript" src="asserts/js/bootstrap.min.js"></script>
 
 		<!-- Icons -->
-		<script type="text/javascript" src="../static/asserts/js/feather.min.js"></script>
+		<script type="text/javascript" src="asserts/js/feather.min.js"></script>
 		<script>
 			feather.replace()
 		</script>
 
 		<!-- Graphs -->
-		<script type="text/javascript" src="../static/asserts/js/Chart.min.js"></script>
+		<script type="text/javascript" src="asserts/js/Chart.min.js"></script>
 		<script>
 			var ctx = document.getElementById("myChart");
 			var myChart = new Chart(ctx, {

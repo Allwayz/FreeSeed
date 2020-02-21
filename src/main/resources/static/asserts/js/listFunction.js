@@ -2,19 +2,54 @@ function showUserDtl(object) {
     alert("111");
 }
 
-
-$(function(table){
-    $.ajax({
-        type: "GET",
-        url: table+"list",
-        dataType: "json",
-        success: function (data) {
-            // TODO Replace default table by database data
-            document.getElementById("tableName").innerHTML = table;
-        }
-    })
+$(".detailText").onclick(function () {
+    var name = $(this).html;
+    confirm(name);
 })
 
+function userDetailClick(dataInput) {
+    $.ajax({
+        url: "checkUserDtl?input="+$(dataInput).html(),
+        dataType: "json",
+        success: function (data) {
+            if(data == null) {
+                alert("No such user's detail");
+            }else {
+                var str = "User ID: " + data.userId + "\n" +
+                    "First Name: " + data.firstName + "\n" +
+                    "Last Name: " + data.lastName + "\n" +
+                    "Brithday: " + data.birthday + "\n" +
+                    "telephone: " + data.telephone;
+                alert(str);
+            }
+        }
+})
+}
+
+function majorDetailClick(dataInput) {
+    $.ajax({
+        url: "checkMajorDtl?input="+$(dataInput).html(),
+        dataType: "json",
+        success: function (data) {
+            if(data[0] == null){
+                alert("No such user's detail");
+            }else {
+                var str
+                // TODO Fix bug that data cannot be traversed
+                for(i = 0;i<data.length;i++){
+                    str = "Major: "+data[i].majorId+"\n"+
+                        "Semester Year: "+data[i].semesterYear+"\n"+
+                        "Semester: "+data[i].semester+"\n"+
+                        "Classroom: "+data[i].classroomId+"\n\n";
+                }
+                alert(str);
+            }
+        }
+    })
+}
+
+
+// 已弃用
 function userClick() {
     $.ajax({
         type: "GET",
@@ -38,7 +73,10 @@ function userClick() {
                     "        </tr>";
             }
             str +="</table></div>";
+            alert(str);
             $("#publicTable").html(str)
+        },error: function (data) {
+
         }
     });
 }
@@ -76,13 +114,3 @@ function reportClick() {
     });
 }
 
-function integrationsClick() {
-    $.ajax({
-        type: "GET",
-        url: "list?table=integrations",
-        dataType: "json",
-        success: function (data) {
-
-        }
-    });
-}
