@@ -10,7 +10,7 @@
     <a href = "https://github.com/Allwayz/FreeSeed/issues"><img src="https://badgen.net/github/issues/Allwayz/FreeSeed"></a>
 	<a href = "https://github.com/Allwayz/FreeSeed/releases"><img src="https://badgen.net/github/release/Allwayz/FreeSeed"></a>
     <a href = "https://github.com/Allwayz/FreeSeed"><img src="https://badgen.net/github/commits/Allwayz/FreeSeed"></a>
-    <img src="https://badgen.net/github/last-commit/Allwayz/FreeSeed/master">
+    <img src="https://badgen.net/github/last-commit/Allwayz/FreeSeed">
 	<img src="https://badgen.net/github/license/Allwayz/FreeSeed">
 </p>
 ------
