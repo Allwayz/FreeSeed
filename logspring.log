@@ -1,0 +1,326 @@
+2020-02-21 17:37:11.870  INFO 45245 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45245 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 17:37:11.874  INFO 45245 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 17:37:12.338  WARN 45245 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 17:37:12.722  INFO 45245 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 17:37:12.730  INFO 45245 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 17:37:12.730  INFO 45245 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 17:37:12.891  INFO 45245 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 17:37:12.898  INFO 45245 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 17:37:12.898  INFO 45245 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 994 ms
+2020-02-21 17:37:13.454  INFO 45245 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 17:37:13.498  INFO 45245 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 17:37:13.624  INFO 45245 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 17:37:13.627  INFO 45245 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 2.205 seconds (JVM running for 3.034)
+2020-02-21 17:37:18.213  INFO 45245 --- [http-nio-8990-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 17:37:18.214  INFO 45245 --- [http-nio-8990-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 17:37:18.219  INFO 45245 --- [http-nio-8990-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-02-21 17:38:49.812  INFO 45245 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 17:38:53.331  INFO 45261 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45261 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 17:38:53.333  INFO 45261 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 17:38:53.691  WARN 45261 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 17:38:54.033  INFO 45261 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 17:38:54.041  INFO 45261 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 17:38:54.041  INFO 45261 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 17:38:54.193  INFO 45261 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 17:38:54.200  INFO 45261 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 17:38:54.200  INFO 45261 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 840 ms
+2020-02-21 17:38:54.692  INFO 45261 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 17:38:54.730  INFO 45261 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 17:38:54.845  INFO 45261 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 17:38:54.848  INFO 45261 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.873 seconds (JVM running for 2.355)
+2020-02-21 17:39:00.284  INFO 45261 --- [http-nio-8990-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 17:39:00.285  INFO 45261 --- [http-nio-8990-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 17:39:00.289  INFO 45261 --- [http-nio-8990-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-02-21 18:01:14.449  INFO 45261 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:01:17.537  INFO 45288 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45288 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:01:17.539  INFO 45288 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:01:17.955  WARN 45288 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:01:18.311  INFO 45288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:01:18.319  INFO 45288 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:01:18.319  INFO 45288 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:01:18.469  INFO 45288 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:01:18.475  INFO 45288 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:01:18.476  INFO 45288 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 905 ms
+2020-02-21 18:01:19.015  INFO 45288 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:01:19.056  INFO 45288 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:01:19.190  INFO 45288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:01:19.193  INFO 45288 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 2.007 seconds (JVM running for 2.514)
+2020-02-21 18:01:28.131  INFO 45288 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:01:28.133  INFO 45288 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:01:28.138  INFO 45288 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-02-21 18:01:40.087  INFO 45288 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:01:42.968  INFO 45297 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45297 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:01:42.970  INFO 45297 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:01:43.339  WARN 45297 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:01:43.674  INFO 45297 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:01:43.682  INFO 45297 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:01:43.683  INFO 45297 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:01:43.830  INFO 45297 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:01:43.837  INFO 45297 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:01:43.837  INFO 45297 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 844 ms
+2020-02-21 18:01:44.327  INFO 45297 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:01:44.378  INFO 45297 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:01:44.517  INFO 45297 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:01:44.520  INFO 45297 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.856 seconds (JVM running for 2.332)
+2020-02-21 18:01:44.612  INFO 45297 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:01:44.613  INFO 45297 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:01:44.616  INFO 45297 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-02-21 18:02:23.079  INFO 45297 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:02:25.510  INFO 45305 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45305 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:02:25.511  INFO 45305 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:02:25.900  WARN 45305 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:02:26.226  INFO 45305 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:02:26.233  INFO 45305 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:02:26.234  INFO 45305 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:02:26.375  INFO 45305 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:02:26.381  INFO 45305 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:02:26.382  INFO 45305 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 834 ms
+2020-02-21 18:02:26.891  INFO 45305 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:02:26.931  INFO 45305 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:02:27.056  INFO 45305 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:02:27.059  INFO 45305 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.882 seconds (JVM running for 2.525)
+2020-02-21 18:02:28.495  INFO 45305 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:02:28.495  INFO 45305 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:02:28.499  INFO 45305 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-02-21 18:02:35.507  INFO 45305 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:02:37.229  INFO 45309 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45309 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:02:37.231  INFO 45309 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:02:37.525  WARN 45309 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:02:37.789  INFO 45309 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:02:37.794  INFO 45309 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:02:37.794  INFO 45309 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:02:37.926  INFO 45309 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:02:37.931  INFO 45309 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:02:37.931  INFO 45309 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 680 ms
+2020-02-21 18:02:38.354  INFO 45309 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:02:38.388  INFO 45309 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:02:38.490  INFO 45309 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:02:38.493  INFO 45309 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.514 seconds (JVM running for 1.906)
+2020-02-21 18:02:41.617  INFO 45309 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:02:41.618  INFO 45309 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:02:41.621  INFO 45309 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-02-21 18:02:50.517  INFO 45309 --- [http-nio-8990-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-21 18:02:50.846  INFO 45309 --- [http-nio-8990-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-21 18:03:24.929  INFO 45309 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:03:24.943  INFO 45309 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-21 18:03:24.951  INFO 45309 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-21 18:03:27.816  INFO 45318 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45318 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:03:27.818  INFO 45318 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:03:28.162  WARN 45318 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:03:28.454  INFO 45318 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:03:28.460  INFO 45318 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:03:28.460  INFO 45318 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:03:28.598  INFO 45318 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:03:28.604  INFO 45318 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:03:28.604  INFO 45318 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 761 ms
+2020-02-21 18:03:29.036  INFO 45318 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:03:29.068  INFO 45318 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:03:29.176  INFO 45318 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:03:29.178  INFO 45318 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.634 seconds (JVM running for 2.059)
+2020-02-21 18:03:32.074  INFO 45318 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:03:32.075  INFO 45318 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:03:32.078  INFO 45318 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-02-21 18:09:18.689  INFO 45318 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:09:21.750  INFO 45459 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45459 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:09:21.751  INFO 45459 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:09:22.091  WARN 45459 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:09:22.384  INFO 45459 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:09:22.390  INFO 45459 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:09:22.390  INFO 45459 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:09:22.527  INFO 45459 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:09:22.533  INFO 45459 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:09:22.533  INFO 45459 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 761 ms
+2020-02-21 18:09:22.977  INFO 45459 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:09:23.013  INFO 45459 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:09:23.132  INFO 45459 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:09:23.135  INFO 45459 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.648 seconds (JVM running for 2.286)
+2020-02-21 18:09:25.845  INFO 45459 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:09:25.846  INFO 45459 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:09:25.850  INFO 45459 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-02-21 18:26:13.395  INFO 45459 --- [http-nio-8990-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-21 18:26:13.667  INFO 45459 --- [http-nio-8990-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-21 18:47:15.637  INFO 45459 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:47:15.643  INFO 45459 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-21 18:47:15.653  INFO 45459 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-21 18:47:19.217  INFO 45541 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45541 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:47:19.219  INFO 45541 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:47:19.607  WARN 45541 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:47:19.906  INFO 45541 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:47:19.912  INFO 45541 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:47:19.912  INFO 45541 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:47:20.039  INFO 45541 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:47:20.044  INFO 45541 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:47:20.044  INFO 45541 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 802 ms
+2020-02-21 18:47:20.526  INFO 45541 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:47:20.564  INFO 45541 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:47:20.682  INFO 45541 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:47:20.685  INFO 45541 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.772 seconds (JVM running for 2.416)
+2020-02-21 18:47:26.991  INFO 45541 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:47:26.992  INFO 45541 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:47:26.995  INFO 45541 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-02-21 18:48:07.241  INFO 45541 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:48:08.994  INFO 45546 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45546 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:48:08.997  INFO 45546 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:48:09.314  WARN 45546 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:48:09.593  INFO 45546 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:48:09.599  INFO 45546 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:48:09.599  INFO 45546 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:48:09.735  INFO 45546 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:48:09.741  INFO 45546 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:48:09.741  INFO 45546 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 722 ms
+2020-02-21 18:48:10.172  INFO 45546 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:48:10.205  INFO 45546 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:48:10.304  INFO 45546 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:48:10.307  INFO 45546 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.588 seconds (JVM running for 1.984)
+2020-02-21 18:48:11.352  INFO 45546 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:48:11.354  INFO 45546 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:48:11.357  INFO 45546 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-02-21 18:49:38.307  INFO 45546 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:49:40.261  INFO 45551 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45551 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:49:40.263  INFO 45551 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:49:40.586  WARN 45551 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:49:40.822  INFO 45551 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:49:40.827  INFO 45551 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:49:40.828  INFO 45551 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:49:40.955  INFO 45551 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:49:40.961  INFO 45551 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:49:40.961  INFO 45551 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 677 ms
+2020-02-21 18:49:41.377  INFO 45551 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:49:41.407  INFO 45551 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:49:41.512  INFO 45551 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:49:41.515  INFO 45551 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.511 seconds (JVM running for 2.103)
+2020-02-21 18:49:44.003  INFO 45551 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:49:44.003  INFO 45551 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:49:44.007  INFO 45551 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-02-21 18:50:19.772  INFO 45551 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:50:21.564  INFO 45556 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45556 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:50:21.566  INFO 45556 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:50:21.888  WARN 45556 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:50:22.171  INFO 45556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:50:22.177  INFO 45556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:50:22.177  INFO 45556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:50:22.313  INFO 45556 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:50:22.319  INFO 45556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:50:22.319  INFO 45556 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 733 ms
+2020-02-21 18:50:22.781  INFO 45556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:50:22.817  INFO 45556 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:50:22.952  INFO 45556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:50:22.954  INFO 45556 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.667 seconds (JVM running for 2.1)
+2020-02-21 18:50:24.552  INFO 45556 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:50:24.553  INFO 45556 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:50:24.556  INFO 45556 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-02-21 18:52:15.619  INFO 45556 --- [http-nio-8990-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-21 18:52:15.884  INFO 45556 --- [http-nio-8990-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-21 18:52:38.416  INFO 45556 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:52:38.417  INFO 45556 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-21 18:52:38.428  INFO 45556 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-21 18:52:40.643  INFO 45571 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45571 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:52:40.645  INFO 45571 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:52:41.034  WARN 45571 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:52:41.331  INFO 45571 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:52:41.338  INFO 45571 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:52:41.338  INFO 45571 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:52:41.475  INFO 45571 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:52:41.480  INFO 45571 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:52:41.480  INFO 45571 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 814 ms
+2020-02-21 18:52:41.931  INFO 45571 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:52:41.968  INFO 45571 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:52:42.084  INFO 45571 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:52:42.087  INFO 45571 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.73 seconds (JVM running for 2.33)
+2020-02-21 18:52:49.475  INFO 45571 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:52:49.476  INFO 45571 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:52:49.480  INFO 45571 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-02-21 18:53:25.433  INFO 45571 --- [http-nio-8990-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-21 18:53:25.653  INFO 45571 --- [http-nio-8990-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-21 18:53:36.433 ERROR 45571 --- [http-nio-8990-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Unexpected value: Major] with root cause
+
+java.lang.IllegalStateException: Unexpected value: Major
+	at com.allwayz.freeseed.JSPController.ListController.showUser(ListController.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2020-02-21 18:54:17.728  INFO 45571 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:54:17.728  INFO 45571 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-21 18:54:17.737  INFO 45571 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-21 18:54:19.455  INFO 45576 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45576 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:54:19.457  INFO 45576 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:54:19.773  WARN 45576 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:54:20.038  INFO 45576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:54:20.043  INFO 45576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:54:20.043  INFO 45576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:54:20.190  INFO 45576 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:54:20.195  INFO 45576 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:54:20.196  INFO 45576 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 719 ms
+2020-02-21 18:54:20.645  INFO 45576 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:54:20.679  INFO 45576 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:54:20.782  INFO 45576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:54:20.785  INFO 45576 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.591 seconds (JVM running for 1.997)
+2020-02-21 18:54:38.452  INFO 45576 --- [http-nio-8990-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:54:38.453  INFO 45576 --- [http-nio-8990-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:54:38.457  INFO 45576 --- [http-nio-8990-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-02-21 18:56:35.741  INFO 45576 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:56:37.746  INFO 45591 --- [main] c.allwayz.freeseed.FreeseedApplication   : Starting FreeseedApplication on AllwayzdeiMac.local with PID 45591 (/Volumes/Macintosh/Document/git/FreeSeed/target/classes started by allwayz in /Volumes/Macintosh/Document/git/FreeSeed)
+2020-02-21 18:56:37.748  INFO 45591 --- [main] c.allwayz.freeseed.FreeseedApplication   : No active profile set, falling back to default profiles: default
+2020-02-21 18:56:38.038  WARN 45591 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.allwayz.freeseed]' package. Please check your configuration.
+2020-02-21 18:56:38.291  INFO 45591 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8990 (http)
+2020-02-21 18:56:38.296  INFO 45591 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-21 18:56:38.297  INFO 45591 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-21 18:56:38.441  INFO 45591 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-21 18:56:38.447  INFO 45591 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-21 18:56:38.447  INFO 45591 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 679 ms
+2020-02-21 18:56:38.883  INFO 45591 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 18:56:38.916  INFO 45591 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2020-02-21 18:56:39.022  INFO 45591 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8990 (http) with context path ''
+2020-02-21 18:56:39.025  INFO 45591 --- [main] c.allwayz.freeseed.FreeseedApplication   : Started FreeseedApplication in 1.561 seconds (JVM running for 2.183)
+2020-02-21 18:56:47.454  INFO 45591 --- [http-nio-8990-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 18:56:47.455  INFO 45591 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-21 18:56:47.458  INFO 45591 --- [http-nio-8990-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-02-21 18:57:31.976  INFO 45591 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

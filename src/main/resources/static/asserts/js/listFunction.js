@@ -18,10 +18,27 @@ $(function(table){
 function userClick() {
     $.ajax({
         type: "GET",
-        url: "list?table=user",
+        url: "listPage?table=user",
         dataType: "json",
         success: function (data) {
+            var str ="<div class=\"table-responsive\"><table class=\"table table-striped table-sm\" >\n" +
+                "        <tr>\n" +
+                "            <th>#</th>\n" +
+                "            <th>Email</th>\n" +
+                "            <th>Update time</th>\n" +
+                "            <th>Role</th>\n" +
+                "        </tr>";
 
+            for(i=0;i<data.length;i++){
+                str +="<tr>\n" +
+                    "            <td>"+data[i].userId+"</td>\n" +
+                    "            <td>"+data[i].userEmail+"</td>\n" +
+                    "            <td>"+data[i].updateTime+"</td>\n" +
+                    "            <td>"+data[i].roleId+"</td>\n" +
+                    "        </tr>";
+            }
+            str +="</table></div>";
+            $("#publicTable").html(str)
         }
     });
 }

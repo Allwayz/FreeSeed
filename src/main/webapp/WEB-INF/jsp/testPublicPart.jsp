@@ -9,9 +9,21 @@
 <html>
 <head>
     <title>Title</title>
+    <!-- Bootstrap core CSS -->
+    <link href="asserts/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="asserts/css/dashboard.css" rel="stylesheet">
+    <script src="asserts/js/jquery-3.4.1.js"></script>
+
+    <script src="asserts/js/listFunction.js"></script>
 </head>
 <body>
-    <%@ include file="jspTemplates/top.jsp"%>
-    <%@ include file="jspTemplates/Side.jsp"%>
+<button onclick="userClick(this)">User</button>
+<button onclick="majorClick()">Major</button>
+<button onclick="enrollmentClick()">Enrollment</button>
+<div id="publicTable">
+
+</div>
 </body>
 </html>
