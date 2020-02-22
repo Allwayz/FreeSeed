@@ -99,7 +99,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">
+								<a class="nav-link" href="report">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2">
 										<line x1="18" y1="20" x2="18" y2="10"></line>
 										<line x1="12" y1="20" x2="12" y2="4"></line>
@@ -109,13 +109,25 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">
+								<a class="nav-link" href="integrations">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
 										<polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
 										<polyline points="2 17 12 22 22 17"></polyline>
 										<polyline points="2 12 12 17 22 12"></polyline>
 									</svg>
 									<span id="integrations">Integrations</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="LogConsole">
+									<img src="https://img.icons8.com/dotty/80/000000/log.png" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+									<span>Log</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="workOrder">
+									<img src="https://img.icons8.com/ios-filled/50/000000/checklist.png" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+									<span>Work Order</span>
 								</a>
 							</li>
 						</ul>

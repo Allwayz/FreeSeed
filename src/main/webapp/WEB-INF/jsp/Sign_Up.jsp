@@ -104,7 +104,7 @@
                url: "addUser?email="+email+"&password="+password+"&role="+role,
                 dataType: "json",
                 success: function (data) {
-                    alert("Go to Homepage to login!")
+                    alert(data)
                 }
             });
         }

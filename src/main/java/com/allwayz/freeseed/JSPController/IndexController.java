@@ -1,6 +1,9 @@
 package com.allwayz.freeseed.JSPController;
 
+import com.allwayz.freeseed.model.entity.Role;
 import com.allwayz.freeseed.model.entity.User;
+import com.allwayz.freeseed.model.enums.RoleEnum;
+import com.allwayz.freeseed.model.mapper.RoleMapper;
 import com.allwayz.freeseed.model.mapper.UserMapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.catalina.Session;
@@ -13,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private RoleMapper roleMapper;
 
     /**
      * multi url Mapping
@@ -41,10 +46,11 @@ public class IndexController {
     @RequestMapping("/loginRequest")
     public String dashboard(String email,String password){
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
+        Role role = roleMapper.selectOne(new QueryWrapper<Role>().eq("role_id",user.getRoleId()));
         if(user.getUserPassword().equals(password)){
-            return "dashboard";
+            return RoleEnum.valueOf(role.getRoleDesc()).LoginUrl();
         }else {
-            return "404";
+            return "error";
         }
     }
 }
