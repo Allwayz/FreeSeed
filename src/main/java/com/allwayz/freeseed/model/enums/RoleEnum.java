@@ -11,13 +11,13 @@ public enum RoleEnum implements roleOperation {
     student{
         @Override
         public String LoginUrl() {
-            return "personalIndex";
+            return "StudentPage/studentDashboard";
         }
     },
     Teacher{
         @Override
         public String LoginUrl() {
-            return "teacherPage";
+            return "TeacherPage/teacherDashboard";
         }
     }
 }

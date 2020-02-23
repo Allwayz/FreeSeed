@@ -16,7 +16,7 @@ import java.util.List;
 
 //TODO show location servlet
 @Controller
-public class LocationSelectServlet {
+public class LocationSelectController {
     @Autowired
     NationalDtlMapper nationalDtlMapper;
     @Autowired
