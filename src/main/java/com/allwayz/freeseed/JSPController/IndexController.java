@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class IndexController {
     @Autowired
@@ -44,10 +46,11 @@ public class IndexController {
      * @return
      */
     @RequestMapping("/loginRequest")
-    public String dashboard(String email,String password){
+    public String dashboard(String email, String password, HttpSession session){
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
         Role role = roleMapper.selectOne(new QueryWrapper<Role>().eq("role_id",user.getRoleId()));
         if(user.getUserPassword().equals(password)){
+            session.setAttribute("User",user);
             return RoleEnum.valueOf(role.getRoleDesc()).LoginUrl();
         }else {
             return "error";

@@ -36,7 +36,6 @@
         <a class="btn btn-sm">English</a>
     </form>
 </div>
-
 </body>
 
 </html>

@@ -68,6 +68,10 @@ public class TestController {
                     .setRoleId(
                             roleMapper.selectOne(new QueryWrapper<Role>().eq("role_desc",role)).getRoleId());
             userMapper.insert(user);
+
+            UserDtl userDtl = new UserDtl()
+                    .setUserId(userMapper.selectCount(new QueryWrapper<User>()));
+            userDtlMapper.insert(userDtl);
             return "You are Sign Up";
         }
     }
