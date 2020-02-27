@@ -104,7 +104,7 @@
                url: "addUser?email="+email+"&password="+password+"&role="+role,
                 dataType: "json",
                 success: function (data) {
-                    alert(data)
+                    window.location.href="index"
                 }
             });
         }
@@ -168,7 +168,7 @@ background-attachment: fixed; background-size: cover">
                 </fieldset>
             </div>
             <br>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="Sign_UpFunction()">Sign Up</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="Sign_UpFunction()" >Sign Up</button>
             <a href="/index" ><h6>Already Have Acount</h6></a>
             <p class="mt-5 mb-3 text-muted">© 1999 - ∞</p>
 

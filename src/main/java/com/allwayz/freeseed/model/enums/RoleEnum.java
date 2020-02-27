@@ -14,7 +14,7 @@ public enum RoleEnum implements roleOperation {
             return "StudentPage/studentDashboard";
         }
     },
-    Teacher{
+    teacher{
         @Override
         public String LoginUrl() {
             return "TeacherPage/teacherDashboard";

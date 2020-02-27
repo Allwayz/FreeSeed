@@ -3,6 +3,7 @@ package com.allwayz.freeseed;
 import com.allwayz.freeseed.model.entity.*;
 import com.allwayz.freeseed.model.mapper.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -210,7 +212,17 @@ public class TestController {
         return majorDtlList;
     }
 
-
+    @RequestMapping("/updateUserDtl")
+    @ResponseBody
+    public String updateUserDtl(int id, String firstName, String lastName, String Birthday, String Telephone){
+        UserDtl userDtl = userDtlMapper.selectById(id);
+        userDtl.setFirstName(firstName)
+                .setLastName(lastName)
+                .setBirthday(Birthday)
+                .setTelephone(Telephone);
+        userDtlMapper.update(userDtl,new UpdateWrapper<UserDtl>().eq("user_dtl_id",userDtl.getUserDtlId()));
+        return "Successful";
+    }
 
 
 

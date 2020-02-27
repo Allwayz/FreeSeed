@@ -79,9 +79,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="transcript">
                         <img src="asserts/img/homework.png">
-                        <span>HomeWork</span>
+                        <span>Transcript</span>
                     </a>
                 </li>
                 <li class="nav-item">

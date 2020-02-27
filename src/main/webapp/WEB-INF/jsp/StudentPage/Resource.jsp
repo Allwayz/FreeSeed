@@ -34,13 +34,13 @@
             </div>
             <div class="card-columns">
                 <c:forEach items="${sessionScope.MajorDtlList}" var="majorDtlList">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3 element-animation" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="asserts/img/${majorDtlList.getMajorId()}" class="card-img" alt="...">
+                            <img src="asserts/img/${majorDtlList.getMajorId()}.png" class="card-img" alt="">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body">
+                            <div class="card-body element-animation">
                                 <h5 class="card-title">Major ID:  <span>${majorDtlList.getMajorId()}</span></h5>
                                 <p class="card-text">Semester Year:  <span>${majorDtlList.getSemesterYear()}</span></p>
                                 <p class="card-text">Semester:  <span>${majorDtlList.getSemester()}</span></p>

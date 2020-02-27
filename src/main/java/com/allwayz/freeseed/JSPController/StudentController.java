@@ -1,18 +1,15 @@
 package com.allwayz.freeseed.JSPController;
 
 import com.allwayz.freeseed.model.entity.MajorDtl;
+import com.allwayz.freeseed.model.entity.Transcript;
 import com.allwayz.freeseed.model.entity.User;
 import com.allwayz.freeseed.model.entity.UserDtl;
-import com.allwayz.freeseed.model.mapper.MajorDtlMapper;
-import com.allwayz.freeseed.model.mapper.RoleMapper;
-import com.allwayz.freeseed.model.mapper.UserDtlMapper;
-import com.allwayz.freeseed.model.mapper.UserMapper;
+import com.allwayz.freeseed.model.mapper.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -25,6 +22,8 @@ public class StudentController {
     private UserDtlMapper userDtlMapper;
     @Autowired
     private MajorDtlMapper majorDtlMapper;
+    @Autowired
+    private TranscriptMapper transcriptMapper;
 
     @RequestMapping("studentDashboard")
     public String studentDashBoard(){
@@ -49,6 +48,15 @@ public class StudentController {
     @RequestMapping("studentWorkOrder")
     public String studentWorkOrder(){
         return "StudentPage/studentWorkOrder";
+    }
+
+    @RequestMapping("transcript")
+    public String studentTranscript(String email, HttpSession session){
+        User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
+        List<Transcript> transcriptList = transcriptMapper.selectList(new QueryWrapper<Transcript>().eq("user_id",user.getUserId()));
+        session.setAttribute("TranscriptList",transcriptList);
+        Transcript transcript;
+        return "StudentPage/Transcript";
     }
 
 }

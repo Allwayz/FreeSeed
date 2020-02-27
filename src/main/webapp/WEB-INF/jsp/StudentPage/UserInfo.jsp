@@ -10,6 +10,25 @@
 <head>
     <title>User Info</title>
     <link href="asserts/css/myCss.css" rel="stylesheet">
+    <script src="asserts/js/jquery-3.4.1.js"></script>
+    <script>
+        function UpdateUser() {
+            var id=${sessionScope.User.getUserId()};
+            var firstName=$("#firstName").val();
+            var lastName=$("#lastName").val();
+            var birthday=$("#Birthday").val();
+            var telephone=$("#Telephone").val();
+            $.ajax({
+                type: "POST",
+                url: "updateUserDtl?id="+id+"&firstName="+firstName+"&lastName="+lastName+"&Birthday="+birthday+"$Telephone="+telephone,
+                //url: "updateUserDtl?id=8&firstName="+firstName+"&lastName="+lastName+"&Birthday="+birthday+"$Telephone="+telephone,
+                dataType: "json",
+                success: function (data) {
+                    window.location.reload();
+                }
+            });
+        }
+    </script>
 </head>
 <body style="background-image: url('asserts/img/background.png')">
 <%@ include file="../jspTemplates/top.jsp"%>
@@ -31,17 +50,22 @@
             <div class="info element-animation">
                 <div class="mr-2">
                     <img src="">
-                    <p>First Name:  <span>${sessionScope.UserDtl.getFirstName()}</span></p>
-                    <p>Last Name:  <span>${sessionScope.UserDtl.getLastName()}</span></p>
-                    <p>Email:  <span>${sessionScope.User.getUserEmail()}</span></p>
-                    <p>Password:  <span>${sessionScope.User.getUserPassword()}</span></p>
-                    <p>Birthday:  <span>${sessionScope.UserDtl.getBirthday()}</span></p>
+                    <p>First Name:  <input id="firstName" type="text" value="${sessionScope.UserDtl.getFirstName()}"/></p>
+                    <p>Last Name:  <input id="lastName" type="text" value="${sessionScope.UserDtl.getLastName()}"/></p>
+                    <p>Email:  <input id="email" type="text" value="${sessionScope.User.getUserEmail()}"/></p>
+                    <p>Password:  <input id="password" type="password" value="${sessionScope.User.getUserPassword()}"/></p>
+                    <p>Birthday:  <input id="Birthday" type="text" value="${sessionScope.UserDtl.getBirthday()}"/></p>
+                    <p>Birthday:  <input id="Telephone" type="text" value="${sessionScope.UserDtl.getTelephone()}"/></p>
+                        <button onclick="UpdateUser()">Update</button>
                 </div>
                 <div style="padding-right: 0">
                     <%--修改个人信息--%>
-                    <a href="">
+                    <a>
                         <img src="https://img.icons8.com/cotton/64/000000/settings--v1.png" width="25" height="25">
                     </a>
+                </div>
+                <div id="updateUser">
+
                 </div>
             </div>
         </main>
