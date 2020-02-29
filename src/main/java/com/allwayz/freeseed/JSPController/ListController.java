@@ -53,5 +53,4 @@ public class ListController {
 
         return new ModelAndView("list","message",table).addObject("tableMap",list);
     }
-
 }

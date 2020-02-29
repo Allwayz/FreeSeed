@@ -1,9 +1,12 @@
 package com.allwayz.freeseed;
 
+import com.allwayz.freeseed.JSPController.StudentController;
 import com.allwayz.freeseed.model.entity.*;
 import com.allwayz.freeseed.model.mapper.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,6 +20,7 @@ import java.util.Map;
 
 @Controller
 public class TestController {
+    private Logger logger = LoggerFactory.getLogger(TestController.class);
 
     @Autowired
     private RoleMapper roleMapper;
@@ -224,6 +228,30 @@ public class TestController {
         return "Successful";
     }
 
+    @RequestMapping("/addMajorDtl")
+    @ResponseBody
+    public String addMajorDtl(int year,String semester,int classroom,int majorId){
+        MajorDtl majorDtl = new MajorDtl()
+                .setSemester(semester)
+                .setSemesterYear(year)
+                .setClassroomId(classroom)
+                .setMajorId(majorId);
+        List<MajorDtl> majorDtlList = majorDtlMapper.selectList(
+                new QueryWrapper<MajorDtl>()
+                        .and(
+                                i -> i.eq("semester",majorDtl.getSemester())
+                                .eq("semester_year",majorDtl.getSemesterYear())
+                                .eq("major_id",majorDtl.getMajorId())
+                                .eq("classroom_id",majorDtl.getClassroomId())
+                        )
+        );
+        if (majorDtlList.size() == 0){
+            majorDtlMapper.insert(majorDtl);
+            return "Success";
+        }else {
+            return "Fail";
+        }
+    }
 
 
 

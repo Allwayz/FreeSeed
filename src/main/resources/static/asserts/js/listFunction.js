@@ -2,7 +2,7 @@ function showUserDtl(object) {
     alert("111");
 }
 
-$(".detailText").onclick(function () {
+$(".detailText").onclick(function a() {
     var name = $(this).html;
     confirm(name);
 })
@@ -47,6 +47,24 @@ function majorDetailClick(dataInput) {
         }
     })
 }
+
+$(".addMajorDtlConm").onclick(function addMajorDtl() {
+    var r = confirm("Confirm to add a Major Dtl")
+    //TODO: can not run here
+    if(r==true){
+        // $.ajax({
+        //     url: "addMajorDtl?year="+year+"&semester="+semester+"&classroom=1&majorId="+majorId,
+        //     dataType: "json",
+        //     success: function (data) {
+        //         alert(data)
+        //     }
+        // })
+        document.write("You pressed OK!")
+    }
+
+})
+
+
 
 
 // 已弃用

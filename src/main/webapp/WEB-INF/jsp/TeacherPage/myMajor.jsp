@@ -18,7 +18,7 @@
     <link href="asserts/css/dashboard.css" rel="stylesheet">
     <script src="asserts/js/jquery-3.4.1.js"></script>
 </head>
-<body>
+<body style="background-image: url('asserts/img/background.png')">
 <%@ include file="../jspTemplates/top.jsp"%>
 <div class="container-fluid">
     <div class="row">
@@ -74,6 +74,7 @@
                             </div>
                         </div>
                         <div class="card-footer bg-transparent border-success">${majorDtlList.getCreateTime()}</div>
+                        <a href="">Details</a>
                     </div>
                 </c:forEach>
             </div>

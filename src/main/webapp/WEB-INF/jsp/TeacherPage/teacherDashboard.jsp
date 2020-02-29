@@ -21,7 +21,7 @@
     <script src="asserts/js/jquery-3.4.1.js"></script>
 
 </head>
-<body>
+<body style="background-image: url('asserts/img/background.png')">
     <%@ include file="../jspTemplates/top.jsp"%>
     <div class="container-fluid">
         <div class="row">

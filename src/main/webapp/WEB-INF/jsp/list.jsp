@@ -90,16 +90,39 @@
 									<th>Major Code</th>
 									<th>Status</th>
 									<th>updateTime</th>
+									<th style="width: 300px">Add Major Detail</th>
 								</tr>
 								</thead>
 								<tbody>
 								<c:forEach items="${tableMap}" var="node">
 									<tr>
-										<td>${node.majorId}</td>
+										<td><span id="majorId">${node.majorId}</span></td>
 										<td><span style="cursor:pointer" onclick="majorDetailClick(this)">${node.majorName}</span></td>
 										<td>${node.majorCode}</td>
 										<td>${node.majorStatus}</td>
 										<td>${node.updateTime}</td>
+										<td>
+											<div class="input-group" style="width: 300px">
+												<select class="custom-select" id="yearSelect">
+													<option selected>Choose...</option>
+													<option value="2020">2020</option>
+													<option value="2021">2021</option>
+													<option value="2022">2022</option>
+													<option value="2024">2024</option>
+												</select>
+												<select class="custom-select" id="semesterSelect">
+													<option selected>Choose...</option>
+													<option value="SS">SS</option>
+													<option value="FW">FW</option>
+												</select>
+												<div>
+														<button class="btn btn-default btn-success addMajorDtlConm">
+<%--															<img src="https://img.icons8.com/ios/50/000000/add.png" width="20">--%>
+															Add
+														</button>
+												</div>
+											</div>
+										</td>
 									</tr>
 								</c:forEach>
 								</tbody>
@@ -117,7 +140,7 @@
 								<tbody>
 								<c:forEach items="${tableMap}" var="node">
 									<tr>
-										<td>${node.userId}</td>
+										<td>${node.enrollmentId}</td>
 										<td><span style="cursor:pointer" onclick="userDetailClick(this)">${node.userId}</span></td>
 										<td>${node.majorDtlId}</td>
 										<td>${node.createTime}</td>

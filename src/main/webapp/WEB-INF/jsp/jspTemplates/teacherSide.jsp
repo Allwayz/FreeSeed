@@ -148,6 +148,10 @@
                 </a>
             </li>
         </ul>
+        <ul style="margin-top: 450px">
+            <p>     © 2020   Allwayz</p>
+            <p>     Power By <a href="https://allwayz.github.io/">Allwayz</a></p>
+        </ul>
     </div>
 </nav>
 </body>

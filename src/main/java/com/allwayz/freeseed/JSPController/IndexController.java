@@ -51,6 +51,8 @@ public class IndexController {
         Role role = roleMapper.selectOne(new QueryWrapper<Role>().eq("role_id",user.getRoleId()));
         if(user.getUserPassword().equals(password)){
             session.setAttribute("User",user);
+            session.setAttribute("UserEmail",user.getUserEmail());
+            session.setAttribute("UserPassword",user.getUserPassword());
             return RoleEnum.valueOf(role.getRoleDesc()).LoginUrl();
         }else {
             return "error";

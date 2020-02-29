@@ -62,14 +62,8 @@
                         <p>First Name: <span>${sessionScope.UserDtl.getFirstName()}</span></p>
                         <p>Last Name: <span>${sessionScope.UserDtl.getLastName()}</span></p>
                         <p>Email: <span>${sessionScope.User.getUserEmail()}</span></p>
-                        </div>
-                        <div style="padding-right: 0">
-                            <%--修改个人信息--%>
-                            <a href="">
-                                <img src="https://img.icons8.com/cotton/64/000000/settings--v1.png" width="25" height="25">
-                            </a>
-                        </div>
                     </div>
+                </div>
             </main>
         </div>
     </div>

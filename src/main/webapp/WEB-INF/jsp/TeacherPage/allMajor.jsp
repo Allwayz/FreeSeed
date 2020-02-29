@@ -17,8 +17,9 @@
     <!-- Custom styles for this template -->
     <link href="asserts/css/dashboard.css" rel="stylesheet">
     <script src="asserts/js/jquery-3.4.1.js"></script>
+    <script src="asserts/js/addEnrollment.js"></script>
 </head>
-<body>
+<body style="background-image: url('asserts/img/background.png')">
 <%@ include file="../jspTemplates/top.jsp"%>
 <div class="container-fluid">
     <div class="row">
@@ -74,6 +75,9 @@
                             </div>
                         </div>
                         <div class="card-footer bg-transparent border-success">${majorDtlList.getCreateTime()}</div>
+                        <button type="button" class="btn btn-default btn-success" style="float: right" onclick="addEnrollment(${majorDtlList.getMajorDtlId()})">
+                            Take Over
+                        </button>
                     </div>
                 </c:forEach>
             </div>

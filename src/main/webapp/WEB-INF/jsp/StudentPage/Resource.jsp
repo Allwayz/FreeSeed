@@ -14,7 +14,7 @@
 
     <script src="asserts/js/jquery-3.4.1.js"></script>
     <script src="asserts/js/bootstrap.min.js"></script>
-
+    <script src="asserts/js/addEnrollment.js"></script>
 </head>
 <body style="background-image: url('asserts/img/background.png')">
 <%@ include file="../jspTemplates/top.jsp"%>
@@ -32,24 +32,55 @@
                     </div>
                 </div>
             </div>
+            <h2><b>My Majors</b></h2>
+            <div class="card-columns">
+                <c:forEach items="${sessionScope.MyMajor}" var="myMajor">
+                    <div class="card mb-3 element-animation" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="asserts/img/${myMajor.getMajorId()}.png" class="card-img" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body element-animation">
+                                    <h5 class="card-title">Major ID:  <span>${myMajor.getMajorId()}</span></h5>
+                                    <p class="card-text">Semester Year:  <span>${myMajor.getSemesterYear()}</span></p>
+                                    <p class="card-text">Semester:  <span>${myMajor.getSemester()}</span></p>
+                                    <p class="card-text">Class ID:  <span>${myMajor.getClassroomId()}</span></p>
+                                    <p class="card-text"><small class="text-muted">${myMajor.getUpdateTime()}</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-success">
+                            <span>${myMajor.getCreateTime()}</span>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+            <hr>
+            <h2><b>All Majors</b></h2>
             <div class="card-columns">
                 <c:forEach items="${sessionScope.MajorDtlList}" var="majorDtlList">
                 <div class="card mb-3 element-animation" style="max-width: 540px;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="asserts/img/${majorDtlList.getMajorId()}.png" class="card-img" alt="">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body element-animation">
-                                <h5 class="card-title">Major ID:  <span>${majorDtlList.getMajorId()}</span></h5>
-                                <p class="card-text">Semester Year:  <span>${majorDtlList.getSemesterYear()}</span></p>
-                                <p class="card-text">Semester:  <span>${majorDtlList.getSemester()}</span></p>
-                                <p class="card-text">Class ID:  <span>${majorDtlList.getClassroomId()}</span></p>
-                                <p class="card-text"><small class="text-muted">${majorDtlList.getUpdateTime()}</small></p>
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="asserts/img/${majorDtlList.getMajorId()}.png" class="card-img" alt="">
                             </div>
-                        </div>
+                            <div class="col-md-8">
+                                <div class="card-body element-animation">
+                                    <h5 class="card-title">Major ID:  <span>${majorDtlList.getMajorId()}</span></h5>
+                                    <p class="card-text">Semester Year:  <span>${majorDtlList.getSemesterYear()}</span></p>
+                                    <p class="card-text">Semester:  <span>${majorDtlList.getSemester()}</span></p>
+                                    <p class="card-text">Class ID:  <span>${majorDtlList.getClassroomId()}</span></p>
+                                    <p class="card-text"><small class="text-muted">${majorDtlList.getUpdateTime()}</small></p>
+                                </div>
+                            </div>
                     </div>
-                    <div class="card-footer bg-transparent border-success">${majorDtlList.getCreateTime()}</div>
+                    <div class="card-footer bg-transparent border-success">
+                        <span>${majorDtlList.getCreateTime()}</span>
+                        <button type="button" class="btn btn-default btn-success" style="float: right" onclick="addEnrollment(${majorDtlList.getMajorDtlId()})">
+                            Enroll Me
+                        </button>
+                    </div>
                 </div>
             </c:forEach>
             </div>

@@ -47,8 +47,8 @@ public class TeacherController {
     }
 
     @RequestMapping("myMajor")
-    public String teacherEnroll(String email,HttpSession session){
-        User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
+    public String teacherEnroll(HttpSession session){
+        User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",session.getAttribute("UserEmail")));
         List<Enrollment> enrollmentList = enrollmentMapper.selectList(new QueryWrapper<Enrollment>().eq("user_id",user.getUserId()));
         List<MajorDtl> majorDtlList = new ArrayList<MajorDtl>();
         for(Enrollment enrollment:enrollmentList){
@@ -58,5 +58,7 @@ public class TeacherController {
         session.setAttribute("MajorDtlList",majorDtlList);
         return "TeacherPage/myMajor";
     }
+
+
 
 }
