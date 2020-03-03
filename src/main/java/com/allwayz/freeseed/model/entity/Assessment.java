@@ -18,18 +18,18 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode()
 @Accessors(chain = true)
-public class Transcript {
+public class Assessment {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "transcript_id", type = IdType.AUTO)
-    private Integer transcriptId;
-
+    @TableId(value = "assessment_id", type = IdType.AUTO)
     private Integer assessmentId;
 
-    private Integer majorDtlId;
+    private String assessmentName;
 
-    private String mark;
+    private Integer precentage;
+
+    private Integer majorId;
 
     private LocalDateTime createTime;
 

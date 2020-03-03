@@ -1,6 +1,6 @@
 package com.allwayz.freeseed.model.service;
 
-import com.allwayz.freeseed.model.entity.Transcript;
+import com.allwayz.freeseed.model.entity.Assessment;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author Allwayz
  * @since 2020-03-03
  */
-public interface ITranscriptService extends IService<Transcript> {
+public interface IAssessmentService extends IService<Assessment> {
 
 }
