@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-03
+ * @since 2020-03-04
  */
 @Service
 public class TranscriptServiceImpl extends ServiceImpl<TranscriptMapper, Transcript> implements ITranscriptService {

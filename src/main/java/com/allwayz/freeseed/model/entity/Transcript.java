@@ -13,12 +13,12 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-03
+ * @since 2020-03-04
  */
 @Data
 @EqualsAndHashCode()
 @Accessors(chain = true)
-public class Transcript {
+public class Transcript{
 
     private static final long serialVersionUID = 1L;
 
@@ -27,7 +27,7 @@ public class Transcript {
 
     private Integer assessmentId;
 
-    private Integer majorDtlId;
+    private Integer enrollmentId;
 
     private String mark;
 

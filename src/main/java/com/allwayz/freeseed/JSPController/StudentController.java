@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class StudentController {
@@ -25,9 +27,13 @@ public class StudentController {
     @Autowired
     private MajorDtlMapper majorDtlMapper;
     @Autowired
+    private MajorMapper majorMapper;
+    @Autowired
     private TranscriptMapper transcriptMapper;
     @Autowired
     private EnrollmentMapper enrollmentMapper;
+    @Autowired
+    private AssessmentMapper assessmentMapper;
 
     @RequestMapping("studentDashboard")
     public String studentDashBoard(){
@@ -69,7 +75,6 @@ public class StudentController {
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
         List<Transcript> transcriptList = transcriptMapper.selectList(new QueryWrapper<Transcript>().eq("user_id",user.getUserId()));
         session.setAttribute("TranscriptList",transcriptList);
-        Transcript transcript;
         return "StudentPage/Transcript";
     }
 
@@ -104,6 +109,63 @@ public class StudentController {
         }
     }
 
+    /**
+     * 显示成绩单的测试方法
+     *
+     * @param email
+     * @param session
+     * @return map
+     */
+    @RequestMapping("testShowTranscript")
+    @ResponseBody
+    public Map testTranscript(String email,HttpSession session){
+        /*
+        如果要显示某学生在某一年某门课的总体成绩, 需要user拿到Enrollment, 历遍EnrollmentList拿到major_dtl,
+        用major_dtl 拿到 major -> assessment,
+        用assessment 和 majord_dtl 拿到transcript
+         */
+        Map<String,List> map = new HashMap<>();
+        //学生身份
+        User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
+        List<Enrollment> enrollmentList = enrollmentMapper.selectList(new QueryWrapper<Enrollment>().eq("user_id",user.getUserId()));
+        //历遍enrollmentList，得到MajorDtlId
+        for(Enrollment enrollment : enrollmentList){
+            List<Transcript> transcriptList = new ArrayList<>();
+            MajorDtl majorDtl = majorDtlMapper.selectOne(new QueryWrapper<MajorDtl>().eq("major_dtl_id",enrollment.getMajorDtlId()));
+            //通过MajorDtlId 得到 Major
+            Major major = majorMapper.selectOne(new QueryWrapper<Major>().eq("major_id",majorDtl.getMajorId()));
+            //通过MajorId 得到 assessmentList
+            List<Assessment> assessmentList = assessmentMapper.selectList(new QueryWrapper<Assessment>().eq("major_id",major.getMajorId()));
+
+            //历遍assessmentList 得到 AssessmentId
+            for(Assessment assessment : assessmentList){
+                //Select Transcript
+                Transcript transcript = transcriptMapper.selectOne(
+                    new QueryWrapper<Transcript>()
+                        .and(i -> i.eq("assessment_id",assessment.getAssessmentId()).eq("enrollment_id",enrollment.getEnrollmentId()))
+                );
+                //放入List
+                transcriptList.add(transcript);
+            }
+            //List放入Map
+            map.put("TranScript",transcriptList);
+        }
+        return map;
+    }
+
     //TODO: work order system
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
