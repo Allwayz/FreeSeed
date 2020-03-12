@@ -1,30 +1,12 @@
 function showUserDtl(object) {
     alert("111");
-}
+};
 
 $(".detailText").onclick(function a() {
     var name = $(this).html;
     confirm(name);
-})
+});
 
-function userDetailClick(dataInput) {
-    $.ajax({
-        url: "checkUserDtl?input="+$(dataInput).html(),
-        dataType: "json",
-        success: function (data) {
-            if(data == null) {
-                alert("No such user's detail");
-            }else {
-                var str = "User ID: " + data.userId + "\n" +
-                    "First Name: " + data.firstName + "\n" +
-                    "Last Name: " + data.lastName + "\n" +
-                    "Brithday: " + data.birthday + "\n" +
-                    "telephone: " + data.telephone;
-                alert(str);
-            }
-        }
-})
-}
 
 function majorDetailClick(dataInput) {
     $.ajax({
@@ -40,31 +22,31 @@ function majorDetailClick(dataInput) {
                     str = "Major: "+data[i].majorId+"\n"+
                         "Semester Year: "+data[i].semesterYear+"\n"+
                         "Semester: "+data[i].semester+"\n"+
-                        "Classroom: "+data[i].classroomId+"\n\n";
+                        "Classroom: "+data[i].classroomId+"\n"+
+                        "====================================="
+                    +"\n\n";
                 }
                 alert(str);
             }
         }
     })
-}
+};
 
-$(".addMajorDtlConm").onclick(function addMajorDtl() {
-    var r = confirm("Confirm to add a Major Dtl")
-    //TODO: can not run here
-    if(r==true){
-        // $.ajax({
-        //     url: "addMajorDtl?year="+year+"&semester="+semester+"&classroom=1&majorId="+majorId,
-        //     dataType: "json",
-        //     success: function (data) {
-        //         alert(data)
-        //     }
-        // })
-        document.write("You pressed OK!")
-    }
-
-})
-
-
+// $(".addMajorDtlConm").onclick(function addMajorDtl() {
+//     var r = confirm("Confirm to add a Major Dtl")
+//     //TODO: can not run here
+//     if(r==true){
+//         // $.ajax({
+//         //     url: "addMajorDtl?year="+year+"&semester="+semester+"&classroom=1&majorId="+majorId,
+//         //     dataType: "json",
+//         //     success: function (data) {
+//         //         alert(data)
+//         //     }
+//         // })
+//         document.write("You pressed OK!")
+//     }
+//
+// });
 
 
 // 已弃用
@@ -97,7 +79,7 @@ function userClick() {
 
         }
     });
-}
+};
 
 function majorClick() {
     $.ajax({
@@ -108,7 +90,7 @@ function majorClick() {
 
         }
     });
-}
+};
 
 function enrollmentClick() {
     $.ajax({
@@ -119,7 +101,7 @@ function enrollmentClick() {
 
         }
     });
-}
+};
 
 function reportClick() {
     $.ajax({
@@ -130,5 +112,5 @@ function reportClick() {
 
         }
     });
-}
+};
 

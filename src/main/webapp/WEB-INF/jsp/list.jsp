@@ -17,7 +17,73 @@
 		<script src="asserts/js/jquery-3.4.1.js"></script>
 
 		<script src="asserts/js/listFunction.js"></script>
+		<script>
+			function userDetailClick(dataInput) {
+				$.ajax({
+					type: "GET",
+					url: "checkUserDtl/"+$(dataInput).html(),
+					dataType: "json",
+					success: function (data) {
+						confirm(
+							"Role: "+data.roleDesc+"\n"+
+							"First Name: "+data.fristName+"\n" +
+							"Last Name: "+data.lastName+"\n" +
+							"Email: "+data.user_email+"\n" +
+							"Password: "+data.user_password+"\n" +
+							"Birthday: "+data.birthday+"\n" +
+							"Telephone: "+data.telephone+"\n" +
+							"================================="+"\n" +
+							"Location: "+data.cityName+" · "+data.provinceName+" · "+data.nationalName
+						)
+					},
+					timeout:2000,
+					sync: true
+				})
+			};
 
+			function addMajorDtl(input) {
+				var r = confirm("Confirm to add a Major Dtl")
+				//TODO: can not run here
+				if(r==true){
+					// $.ajax({
+					//     url: "addMajorDtl?year="+year+"&semester="+semester+"&classroom=1&majorId="+majorId,
+					//     dataType: "json",
+					//     success: function (data) {
+					//         alert(data)
+					//     }
+					// })
+					alert(input.val())
+					//document.write("You pressed OK!")
+				}
+
+			};
+
+			function addMajor(majorDepartment,MajorName) {
+				$.ajax({
+					    url: "addMajor?majorDepartment="+$(majorDepartment).val()+"&majorName="+$(MajorName).val(),
+					    dataType: "json",
+					    success: function (data) {
+					        location.reload();
+					    }
+				})
+				location.reload();
+			}
+		</script>
+		<script>
+			function turn_gray(id,majorId) {
+				document.getElementById("netghost").style.display = "block";
+				document.getElementById("netghost").style.width = document.body.clientWidth;
+				document.getElementById("netghost").style.height = document.body.clientHeight;
+				document.getElementById(id).style.display = "block";
+				document.getElementById(id).style.top = document.documentElement.scrollTop + document.body.scrollTop + 100;
+				document.getElementById(id).style.left = (document.body.clientWidth - document.getElementById(id).clientWidth) / 2;
+				document.getElementById(major_id).setAttribute(majorId);
+			}
+			function turn_back(id) {
+				document.getElementById(id).style.display = "none";
+				document.getElementById("netghost").style.display = "none";
+			}
+		</script>
 
 		<style type="text/css">
 			/* Chart.js */
@@ -44,6 +110,25 @@
 				-webkit-animation: chartjs-render-animation 0.001s;
 				animation: chartjs-render-animation 0.001s;
 			}
+
+			.fw
+			{
+				position: absolute;
+				z-index: 2002;
+				width: 550px;
+				height: 600px;
+				background-color:#fff;
+				display: none;
+				border: 2px solid #000;
+			}
+
+			.fw a
+			{
+				font-size: 24px;
+				float: right;
+				padding-right: 10px;
+				text-decoration: none;
+			}
 		</style>
 
 	</head>
@@ -56,7 +141,17 @@
 				<%@ include file="jspTemplates/Side.jsp"%>
 				<!--TODO get data from database-->
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-					<h2 id="tableName">${requestScope.message}</h2>
+					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+						<h2 id="tableName">${requestScope.message}</h2>
+						<div class="btn-toolbar mb-2 mb-md-0">
+							<div class="btn-group mr-2">
+								<button class="btn btn-sm btn-outline-secondary" onclick="location.reload()">
+									<img src="https://img.icons8.com/officel/16/000000/available-updates.png" width="30"/>
+									Refresh
+								</button>
+							</div>
+						</div>
+					</div>
 					<div class="table-responsive">
 						<table class="table table-striped table-sm">
 							<c:choose>
@@ -103,28 +198,28 @@
 										<td>${node.updateTime}</td>
 										<td>
 											<div class="input-group" style="width: 300px">
-												<select class="custom-select" id="yearSelect">
-													<option selected>Choose...</option>
-													<option value="2020">2020</option>
-													<option value="2021">2021</option>
-													<option value="2022">2022</option>
-													<option value="2024">2024</option>
-												</select>
-												<select class="custom-select" id="semesterSelect">
-													<option selected>Choose...</option>
-													<option value="SS">SS</option>
-													<option value="FW">FW</option>
-												</select>
 												<div>
-														<button class="btn btn-default btn-success addMajorDtlConm">
-<%--															<img src="https://img.icons8.com/ios/50/000000/add.png" width="20">--%>
-															Add
+														<button class="btn btn-default btn-success" onclick="turn_gray('fw_01',${node.majorId})">
+															Add a major detail
 														</button>
 												</div>
 											</div>
 										</td>
 									</tr>
 								</c:forEach>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>
+										<span onclick="turn_gray('fw_02')">
+											<img src="https://img.icons8.com/officel/80/000000/add-database.png" width="20">
+											Add new Row
+										</span>
+									</td>
+								</tr>
 								</tbody>
 							</c:when>
 							<%--用户学科--%>
@@ -151,14 +246,62 @@
 							</c:choose>
 						</table>
 					</div>
+					<div id="netghost"></div>
+					<!-------浮层---------->
+					<div id="fw_01" class="fw">
+						<div class="input-group back" style="width: 500px">
+							<a href="javascript: turn_back('fw_01')">×</a>
+							<select class="custom-select" id="yearSelect">
+								<option selected>Choose...</option>
+								<option value="2020">2020</option>
+								<option value="2021">2021</option>
+								<option value="2022">2022</option>
+								<option value="2024">2024</option>
+							</select>
+							<select class="custom-select" id="semesterSelect">
+								<option selected>Choose...</option>
+								<option value="SS">SS</option>
+								<option value="FW">FW</option>
+							</select>
+							majorId: <span id="major_id">2</span>
+							<div>
+								<button class="btn btn-default btn-success">
+<%--									TODO: 无法传递参数--%>
+									<span onclick="addMajorDtl(this.$('#majorId'))">Confirm</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div id="fw_02" class="fw">
+							Major Name: <input type="text" id="majorName" name="majorName">
+						Major Department: <select id="majorDepartmentList" >
+								<option selected>Choose...</option>
+								<option>Philosophy</option>
+								<option>Economics</option>
+								<option>Law</option>
+								<option>Education</option>
+								<option>Literature</option>
+								<option>History</option>
+								<option>Science</option>
+								<option>Engineering</option>
+								<option>Agriculture</option>
+								<option>Medicine</option>
+								<option>Military</option>
+								<option>Management</option>
+								<option>Art</option>
+							</select>
+						<button onclick="addMajor($('#majorDepartmentList'),$('#majorName'))">Commit</button>
+						<a href="javascript: turn_back('fw_02')">Cancel</a>
+					</div>
 				</main>
 			</div>
 		</div>
 
+
 		<!-- Bootstrap core JavaScript
     ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js"></script>
+		<script type="text/javascript" src="asserts/js/jquery-3.4.1.js"></script>
 		<script type="text/javascript" src="asserts/js/popper.min.js"></script>
 		<script type="text/javascript" src="asserts/js/bootstrap.min.js"></script>
 

@@ -42,26 +42,14 @@
     </script>
 </head>
 <body>
-    <div id="role_table">
+    <form method="get">
+        <input name="a" type="text"/>
+        <input name="b" type="text"/>
+        <input type="submit" value="add">
+        <input type="submit" value="subtraction">
+        <input type="submit" value="multiplication">
+        <input type="submit" value="division">
+    </form>
 
-    </div>
-    <table>
-        <tr>
-            <th>#</th>
-            <th>role</th>
-            <th>Create time</th>
-            <th>Update time</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <!--循环-->
-    </table>
-
-
-    <button onclick="showRoleTable()">click</button>
 </body>
 </html>

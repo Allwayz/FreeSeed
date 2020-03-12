@@ -10,11 +10,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +27,8 @@ public class TestController {
     private CityDtlMapper cityDtlMapper;
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private ProvinceDtlMapper provinceDtlMapper;
     @Autowired
     private NationalDtlMapper nationalDtlMapper;
     @Autowired
@@ -154,7 +155,8 @@ public class TestController {
         }
             String i = Integer.toString(majorMapper.selectCount(new QueryWrapper<Major>().like("major_code",majorCodePrefix))+1);
         major.setMajorCode(majorCodePrefix+i);
-        return null;
+        majorMapper.insert(major);
+        return "Successful";
     }
 
     /**
@@ -200,12 +202,29 @@ public class TestController {
         return userList;
     }
 
-    @RequestMapping("/checkUserDtl")
+    @RequestMapping(value = "checkUserDtl/{email}", method = {RequestMethod.GET})
     @ResponseBody
-    public UserDtl userDtlSelect(String input){
-        int i = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",input)).getUserId();
-        UserDtl userDtl = userDtlMapper.selectOne(new QueryWrapper<UserDtl>().eq("user_id",i));
-        return userDtl;
+    public Map<String,String> userDtlSelect(@PathVariable(value = "email") String email){
+        User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
+        Role role = roleMapper.selectById(user.getRoleId());
+        UserDtl userDtl = userDtlMapper.selectOne(new QueryWrapper<UserDtl>().eq("user_id",user.getUserId()));
+        CityDtl cityDtl = cityDtlMapper.selectById(userDtl.getCityDtlId());
+        ProvinceDtl provinceDtl = provinceDtlMapper.selectById(cityDtl.getProvinceDtlId());
+        NationalDtl nationalDtl = nationalDtlMapper.selectById(provinceDtl.getNationalDtlId());
+        Map<String,String> map = new HashMap<>();
+        map.put("user_email",user.getUserEmail());
+        map.put("user_password",user.getUserPassword());
+        map.put("firstName",userDtl.getFirstName());
+        map.put("lastName",userDtl.getLastName());
+        map.put("birthday",userDtl.getBirthday());
+        map.put("telephone",userDtl.getTelephone());
+        //地址
+        map.put("nationalName",nationalDtl.getNationalDtlName());
+        map.put("nationalCode",nationalDtl.getNationalDtlCode());
+        map.put("provinceName",provinceDtl.getProvinceDtlName());
+        map.put("cityName",cityDtl.getCityDtlName());
+        map.put("roseDesc",role.getRoleDesc());
+        return map;
     }
 
     @RequestMapping("/checkMajorDtl")

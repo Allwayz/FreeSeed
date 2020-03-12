@@ -6,4 +6,5 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan("com.allwayz.freeseed.model.mapper")
 public class MyBatisConfig {
+
 }

@@ -39,7 +39,7 @@ public class ListController {
                 list = userMapper.selectList(new QueryWrapper<User>());
                 break;
             case "major":
-                list = majorMapper.selectList(new QueryWrapper<Major>().orderByAsc("major_code"));
+                list = majorMapper.selectList(new QueryWrapper<Major>().orderByAsc("major_id"));
                 break;
             case "enrollment":
                 list = enrollmentMapper.selectList(new QueryWrapper<Enrollment>());
