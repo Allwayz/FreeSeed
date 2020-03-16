@@ -14,7 +14,20 @@
 
     <script src="asserts/js/jquery-3.4.1.js"></script>
     <script src="asserts/js/bootstrap.min.js"></script>
-    <script src="asserts/js/addEnrollment.js"></script>
+<%--    <script src="asserts/js/addEnrollment.js"></script>--%>
+    <script>
+        function addEnrollment(majorDtlId) {
+            $.ajax({
+                url: "addEnrollment/"+majorDtlId,
+                method: "put",
+                dataType: "json",
+                success: function (data) {
+                    //console.log("insert Enrollment Successfully!")
+                    alert("Success");
+                }
+            })
+        }
+    </script>
 </head>
 <body style="background-image: url('asserts/img/background.png')">
 <%@ include file="../jspTemplates/top.jsp"%>
@@ -26,9 +39,10 @@
                 <h1 class="h2">Major Resource</h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group mr-2">
-                        <!--TODO finish Share and Export function-->
-                        <button class="btn btn-sm btn-outline-secondary" >Share</button>
-                        <button class="btn btn-sm btn-outline-secondary">Export</button>
+                        <button class="btn btn-sm btn-outline-secondary" onclick="location.reload()">
+                            <img src="https://img.icons8.com/officel/16/000000/available-updates.png" width="30"/>
+                            Refresh
+                        </button>
                     </div>
                 </div>
             </div>
@@ -38,20 +52,20 @@
                     <div class="card mb-3 element-animation" style="max-width: 540px;">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="asserts/img/${myMajor.getMajorId()}.png" class="card-img" alt="">
+                                <img src="asserts/img/2.png" class="card-img" alt="">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body element-animation">
-                                    <h5 class="card-title">Major ID:  <span>${myMajor.getMajorId()}</span></h5>
-                                    <p class="card-text">Semester Year:  <span>${myMajor.getSemesterYear()}</span></p>
-                                    <p class="card-text">Semester:  <span>${myMajor.getSemester()}</span></p>
-                                    <p class="card-text">Class ID:  <span>${myMajor.getClassroomId()}</span></p>
-                                    <p class="card-text"><small class="text-muted">${myMajor.getUpdateTime()}</small></p>
+                                    <h5 class="card-title"><span>${myMajor.get("major_Name")}</span></h5>
+                                    <p class="card-text">Semester Year:  <span>${myMajor.get("semesterYear")}</span></p>
+                                    <p class="card-text">Semester:  <span>${myMajor.get("semester")}</span></p>
+                                    <p class="card-text">Classroom:  <span>${myMajor.get("classroom")}</span></p>
+                                    <p class="card-text"><small class="text-muted">${myMajor.get("createTime")}</small></p>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer bg-transparent border-success">
-                            <span>${myMajor.getCreateTime()}</span>
+                            <span>${myMajor.get("createTime")}</span>
                         </div>
                     </div>
                 </c:forEach>
@@ -59,25 +73,25 @@
             <hr>
             <h2><b>All Majors</b></h2>
             <div class="card-columns">
-                <c:forEach items="${sessionScope.MajorDtlList}" var="majorDtlList">
+                <c:forEach items="${sessionScope.mapList}" var="mapList">
                 <div class="card mb-3 element-animation" style="max-width: 540px;">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="asserts/img/${majorDtlList.getMajorId()}.png" class="card-img" alt="">
+                                <img src="asserts/img/1.png" class="card-img" alt="">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body element-animation">
-                                    <h5 class="card-title">Major ID:  <span>${majorDtlList.getMajorId()}</span></h5>
-                                    <p class="card-text">Semester Year:  <span>${majorDtlList.getSemesterYear()}</span></p>
-                                    <p class="card-text">Semester:  <span>${majorDtlList.getSemester()}</span></p>
-                                    <p class="card-text">Class ID:  <span>${majorDtlList.getClassroomId()}</span></p>
-                                    <p class="card-text"><small class="text-muted">${majorDtlList.getUpdateTime()}</small></p>
+                                    <h5 class="card-title">Major Name:  <span>${mapList.get("major_Name")}</span></h5>
+                                    <p class="card-text">Semester Year:  <span>${mapList.get("semesterYear")}</span></p>
+                                    <p class="card-text">Semester:  <span>${mapList.get("semester")}</span></p>
+                                    <p class="card-text">Classroom:  <span>${mapList.get("classroom")}</span></p>
+                                    <p class="card-text"><small class="text-muted">${mapList.get("createTime")}</small></p>
                                 </div>
                             </div>
                     </div>
                     <div class="card-footer bg-transparent border-success">
-                        <span>${majorDtlList.getCreateTime()}</span>
-                        <button type="button" class="btn btn-default btn-success" style="float: right" onclick="addEnrollment(${majorDtlList.getMajorDtlId()})">
+                        <span>${mapList.get("createTime")}</span>
+                        <button type="button" class="btn btn-default btn-success" style="float: right" onclick="addEnrollment(${mapList.get("majorDtlId")})">
                             Enroll Me
                         </button>
                     </div>

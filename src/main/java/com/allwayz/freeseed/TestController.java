@@ -1,6 +1,5 @@
 package com.allwayz.freeseed;
 
-import com.allwayz.freeseed.JSPController.StudentController;
 import com.allwayz.freeseed.model.entity.*;
 import com.allwayz.freeseed.model.mapper.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -9,10 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -104,12 +101,14 @@ public class TestController {
     public String addMajor(String majorDepartment,String majorName){
         Major major = new Major();
         major.setMajorName(majorName);
+
         /*
          * 哲学        经济学     法学  教育学       文学     历史学   力学     工学         农学        医学     军事学             管理学     艺术学
          * Philosophy,Economics,Law,Education,Literature,History,Science,Engineering,Agriculture,Medicine,Military Science,Management, Art
          * 501xx      502xx    503xx  504xx      505xx     506xx   507xx   508xx        509xx      510xx    511xx            512xx       513xx
          */
         String majorCodePrefix;
+
         switch(majorDepartment){
             case "Philosophy" :
                 majorCodePrefix = "MC_501";
@@ -202,6 +201,11 @@ public class TestController {
         return userList;
     }
 
+    /**
+     *
+     * @param email
+     * @return
+     */
     @RequestMapping(value = "checkUserDtl/{email}", method = {RequestMethod.GET})
     @ResponseBody
     public Map<String,String> userDtlSelect(@PathVariable(value = "email") String email){
@@ -270,6 +274,21 @@ public class TestController {
         }else {
             return "Fail";
         }
+    }
+
+    /**
+     * <p>
+     *     删除用户
+     * </p>
+     * @param userId
+     * @return
+     */
+    @ResponseBody
+    @DeleteMapping("deleteUser/{userId}")
+    public String deleteUser(@PathVariable("userId") int userId){
+        logger.info("Delete user = "+userId);
+        userMapper.deleteById(userId);
+        return "Succeed";
     }
 
 

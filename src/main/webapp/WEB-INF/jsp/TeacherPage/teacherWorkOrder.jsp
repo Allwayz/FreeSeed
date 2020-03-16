@@ -30,7 +30,7 @@
 <%@ include file="../jspTemplates/top.jsp"%>
 <div class="container-fluid">
     <div class="row">
-        <%@ include file="../jspTemplates/StudentSide.jsp"%>
+        <%@ include file="../jspTemplates/teacherSide.jsp"%>
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <div id="test-editormd">
                 <textarea style="display:none;"  class="form-control" id="content-editormd-markdown-doc" name="content-editormd-markdown-doc"></textarea>

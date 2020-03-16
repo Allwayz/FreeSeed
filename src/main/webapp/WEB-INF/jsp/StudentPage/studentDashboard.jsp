@@ -59,9 +59,9 @@
                 <div class="info element-animation">
                     <div class="mr-2">
                         <img src="">
-                        <p>First Name: <span>${sessionScope.UserDtl.getFirstName()}</span></p>
-                        <p>Last Name: <span>${sessionScope.UserDtl.getLastName()}</span></p>
-                        <p>Email: <span>${sessionScope.User.getUserEmail()}</span></p>
+                        <p>First Name: <span>${sessionScope.firstName}</span></p>
+                        <p>Last Name: <span>${sessionScope.lastName}</span></p>
+                        <p>Email: <span>${sessionScope.UserEmail}</span></p>
                     </div>
                 </div>
             </main>

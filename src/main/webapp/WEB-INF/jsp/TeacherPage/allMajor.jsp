@@ -17,7 +17,22 @@
     <!-- Custom styles for this template -->
     <link href="asserts/css/dashboard.css" rel="stylesheet">
     <script src="asserts/js/jquery-3.4.1.js"></script>
-    <script src="asserts/js/addEnrollment.js"></script>
+    <script>
+        function addEnrollment(majorDtlId) {
+            var r = confirm("Confirm to take over this major!");
+            if(r) {
+                $.ajax({
+                    url: "addEnrollment/" + majorDtlId,
+                    method: "put",
+                    dataType: "json",
+                    success: function (data) {
+                        //console.log("insert Enrollment Successfully!")
+                        alert("Success");
+                    }
+                })
+            }
+        }
+    </script>
 </head>
 <body style="background-image: url('asserts/img/background.png')">
 <%@ include file="../jspTemplates/top.jsp"%>
@@ -58,26 +73,28 @@
             </div>
             <%--Session:"MajorDtlList",majorDtlList--%>
             <div class="card-columns">
-                <c:forEach items="${sessionScope.MajorDtlList}" var="majorDtlList">
+                <c:forEach items="${sessionScope.mapList}" var="mapList">
                     <div class="card mb-3 element-animation" style="max-width: 540px;">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="asserts/img/${majorDtlList.getMajorId()}.png" class="card-img" alt="">
+                                <img src="asserts/img/1.png" class="card-img" alt="">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body element-animation">
-                                    <h5 class="card-title">Major ID:  <span>${majorDtlList.getMajorId()}</span></h5>
-                                    <p class="card-text">Semester Year:  <span>${majorDtlList.getSemesterYear()}</span></p>
-                                    <p class="card-text">Semester:  <span>${majorDtlList.getSemester()}</span></p>
-                                    <p class="card-text">Class ID:  <span>${majorDtlList.getClassroomId()}</span></p>
-                                    <p class="card-text"><small class="text-muted">${majorDtlList.getUpdateTime()}</small></p>
+                                    <h5 class="card-title">Major Name:  <span>${mapList.get("major_Name")}</span></h5>
+                                    <p class="card-text">Semester Year:  <span>${mapList.get("semesterYear")}</span></p>
+                                    <p class="card-text">Semester:  <span>${mapList.get("semester")}</span></p>
+                                    <p class="card-text">Classroom:  <span>${mapList.get("classroom")}</span></p>
+                                    <p class="card-text"><small class="text-muted">${mapList.get("createTime")}</small></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer bg-transparent border-success">${majorDtlList.getCreateTime()}</div>
-                        <button type="button" class="btn btn-default btn-success" style="float: right" onclick="addEnrollment(${majorDtlList.getMajorDtlId()})">
-                            Take Over
-                        </button>
+                        <div class="card-footer bg-transparent border-success">
+                            <span>${mapList.get("createTime")}</span>
+                            <button type="button" class="btn btn-default btn-success" style="float: right" onclick="addEnrollment(${mapList.get("majorDtlId")})">
+                                Takeover
+                            </button>
+                        </div>
                     </div>
                 </c:forEach>
             </div>

@@ -2,8 +2,10 @@ package com.allwayz.freeseed.JSPController;
 
 import com.allwayz.freeseed.model.entity.Role;
 import com.allwayz.freeseed.model.entity.User;
+import com.allwayz.freeseed.model.entity.UserDtl;
 import com.allwayz.freeseed.model.enums.RoleEnum;
 import com.allwayz.freeseed.model.mapper.RoleMapper;
+import com.allwayz.freeseed.model.mapper.UserDtlMapper;
 import com.allwayz.freeseed.model.mapper.UserMapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.catalina.Session;
@@ -21,6 +23,8 @@ public class IndexController {
     private UserMapper userMapper;
     @Autowired
     private RoleMapper roleMapper;
+    @Autowired
+    private UserDtlMapper userDtlMapper;
 
     /**
      * multi url Mapping
@@ -51,9 +55,12 @@ public class IndexController {
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
         Role role = roleMapper.selectOne(new QueryWrapper<Role>().eq("role_id",user.getRoleId()));
         if(user.getUserPassword().equals(password)){
+            UserDtl userDtl = userDtlMapper.selectById(user.getUserId());
             session.setAttribute("User",user);
             session.setAttribute("UserEmail",user.getUserEmail());
             session.setAttribute("UserPassword",user.getUserPassword());
+            session.setAttribute("firstName",userDtl.getFirstName());
+            session.setAttribute("lastName",userDtl.getLastName());
             return RoleEnum.valueOf(role.getRoleDesc()).LoginUrl();
         }else {
             return "error";

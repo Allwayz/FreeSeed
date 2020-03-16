@@ -57,24 +57,25 @@
             </div>
             <%--Session:"MajorDtlList",majorDtlList--%>
             <div class="card-columns">
-                <c:forEach items="${sessionScope.MajorDtlList}" var="majorDtlList">
+                <c:forEach items="${sessionScope.MyMajor}" var="myMajor">
                     <div class="card mb-3 element-animation" style="max-width: 540px;">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="asserts/img/${majorDtlList.getMajorId()}.png" class="card-img" alt="">
+                                <img src="asserts/img/2.png" class="card-img" alt="">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body element-animation">
-                                    <h5 class="card-title">Major ID:  <span>${majorDtlList.getMajorId()}</span></h5>
-                                    <p class="card-text">Semester Year:  <span>${majorDtlList.getSemesterYear()}</span></p>
-                                    <p class="card-text">Semester:  <span>${majorDtlList.getSemester()}</span></p>
-                                    <p class="card-text">Class ID:  <span>${majorDtlList.getClassroomId()}</span></p>
-                                    <p class="card-text"><small class="text-muted">${majorDtlList.getUpdateTime()}</small></p>
+                                    <h5 class="card-title"><span>${myMajor.get("major_Name")}</span></h5>
+                                    <p class="card-text">Semester Year:  <span>${myMajor.get("semesterYear")}</span></p>
+                                    <p class="card-text">Semester:  <span>${myMajor.get("semester")}</span></p>
+                                    <p class="card-text">Classroom:  <span>${myMajor.get("classroom")}</span></p>
+                                    <p class="card-text"><small class="text-muted">${myMajor.get("createTime")}</small></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer bg-transparent border-success">${majorDtlList.getCreateTime()}</div>
-                        <a href="">Details</a>
+                        <div class="card-footer bg-transparent border-success">
+                            <span>${myMajor.get("createTime")}</span><a href="" style="float: right">Details</a>
+                        </div>
                     </div>
                 </c:forEach>
             </div>

@@ -41,6 +41,29 @@
 				})
 			};
 
+			function userDetailClickById(dataInput) {
+				$.ajax({
+					type: "GET",
+					url: "checkUserDtlById/"+dataInput,
+					dataType: "json",
+					success: function (data) {
+						confirm(
+								"Role: "+data.roleDesc+"\n"+
+								"First Name: "+data.fristName+"\n" +
+								"Last Name: "+data.lastName+"\n" +
+								"Email: "+data.user_email+"\n" +
+								"Password: "+data.user_password+"\n" +
+								"Birthday: "+data.birthday+"\n" +
+								"Telephone: "+data.telephone+"\n" +
+								"================================="+"\n" +
+								"Location: "+data.cityName+" · "+data.provinceName+" · "+data.nationalName
+						)
+					},
+					timeout:2000,
+					sync: true
+				})
+			};
+
 			function addMajorDtl(input) {
 				var r = confirm("Confirm to add a Major Dtl")
 				//TODO: can not run here
@@ -77,11 +100,25 @@
 				document.getElementById(id).style.display = "block";
 				document.getElementById(id).style.top = document.documentElement.scrollTop + document.body.scrollTop + 100;
 				document.getElementById(id).style.left = (document.body.clientWidth - document.getElementById(id).clientWidth) / 2;
-				document.getElementById(major_id).setAttribute(majorId);
 			}
 			function turn_back(id) {
 				document.getElementById(id).style.display = "none";
 				document.getElementById("netghost").style.display = "none";
+			}
+
+			function deleteUser(userId) {
+				var r = confirm("Are you confirm to disable this account?")
+				if(r){
+					$.ajax({
+						url: "deleteUser/"+userId,
+						method: "delete",
+						dataType: "json",
+						success: function (data) {
+							location.reload();
+						}
+					})
+				}
+
 			}
 		</script>
 
@@ -163,6 +200,7 @@
 										<th>${requestScope.message}</th>
 										<th>updateTime</th>
 										<th>Role</th>
+										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -171,7 +209,27 @@
 											<td>${node.userId}</td>
 											<td><span style="cursor:pointer" onclick="userDetailClick(this)">${node.userEmail}</span></td>
 											<td>${node.updateTime}</td>
-											<td>${node.roleId}</td>
+											<td>
+												<c:choose>
+													<c:when test="${node.roleId == 1}">
+													Admin
+													</c:when>
+													<c:when test="${node.roleId == 2}">
+														Teacher
+													</c:when>
+													<c:when test="${node.roleId == 3}">
+														Student
+													</c:when>
+												</c:choose>
+											</td>
+											<c:choose>
+												<c:when test="${node.roleId == 1}">
+													<td><button class="btn btn-warning" onclick="deleteUser(${node.userId})" disabled>Disable User</button></td>
+												</c:when>
+												<c:otherwise>
+													<td><button class="btn btn-warning" onclick="deleteUser(${node.userId})">Disable User</button></td>
+												</c:otherwise>
+											</c:choose>
 										</tr>
 									</c:forEach>
 								</tbody>
@@ -236,7 +294,7 @@
 								<c:forEach items="${tableMap}" var="node">
 									<tr>
 										<td>${node.enrollmentId}</td>
-										<td><span style="cursor:pointer" onclick="userDetailClick(this)">${node.userId}</span></td>
+										<td><span style="cursor:pointer" onclick="userDetailClickById(${node.userId})">${node.userId}</span></td>
 										<td>${node.majorDtlId}</td>
 										<td>${node.createTime}</td>
 									</tr>
@@ -247,7 +305,7 @@
 						</table>
 					</div>
 					<div id="netghost"></div>
-					<!-------浮层---------->
+					<!-------MajorDtl浮层---------->
 					<div id="fw_01" class="fw">
 						<div class="input-group back" style="width: 500px">
 							<a href="javascript: turn_back('fw_01')">×</a>
@@ -272,6 +330,7 @@
 							</div>
 						</div>
 					</div>
+					<!-------Major浮层------------->
 					<div id="fw_02" class="fw">
 							Major Name: <input type="text" id="majorName" name="majorName">
 						Major Department: <select id="majorDepartmentList" >

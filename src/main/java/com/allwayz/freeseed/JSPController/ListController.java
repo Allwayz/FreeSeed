@@ -1,16 +1,14 @@
 package com.allwayz.freeseed.JSPController;
 
-import com.allwayz.freeseed.model.entity.Enrollment;
-import com.allwayz.freeseed.model.entity.Major;
-import com.allwayz.freeseed.model.entity.Role;
-import com.allwayz.freeseed.model.entity.User;
-import com.allwayz.freeseed.model.mapper.EnrollmentMapper;
-import com.allwayz.freeseed.model.mapper.MajorMapper;
-import com.allwayz.freeseed.model.mapper.UserMapper;
+import com.allwayz.freeseed.model.entity.*;
+import com.allwayz.freeseed.model.mapper.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
@@ -25,6 +23,18 @@ public class ListController {
     private MajorMapper majorMapper;
     @Autowired
     private EnrollmentMapper enrollmentMapper;
+    @Autowired
+    private RoleMapper roleMapper;
+    @Autowired
+    private CityDtlMapper cityDtlMapper;
+    @Autowired
+    private ProvinceDtlMapper provinceDtlMapper;
+    @Autowired
+    private NationalDtlMapper nationalDtlMapper;
+    @Autowired
+    protected MajorDtlMapper majorDtlMapper;
+    @Autowired
+    private UserDtlMapper userDtlMapper;
 
     /**
      *
@@ -49,5 +59,30 @@ public class ListController {
         }
 
         return new ModelAndView("list","message",table).addObject("tableMap",list);
+    }
+
+    @ResponseBody
+    @GetMapping(value = "checkUserDtlById/{userId}")
+    public Map<String,String> userDtlById(@PathVariable(value = "userId") int userId){
+        User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_id",userId));
+        Role role = roleMapper.selectById(user.getRoleId());
+        UserDtl userDtl = userDtlMapper.selectOne(new QueryWrapper<UserDtl>().eq("user_id",user.getUserId()));
+        CityDtl cityDtl = cityDtlMapper.selectById(userDtl.getCityDtlId());
+        ProvinceDtl provinceDtl = provinceDtlMapper.selectById(cityDtl.getProvinceDtlId());
+        NationalDtl nationalDtl = nationalDtlMapper.selectById(provinceDtl.getNationalDtlId());
+        Map<String,String> map = new HashMap<>();
+        map.put("user_email",user.getUserEmail());
+        map.put("user_password",user.getUserPassword());
+        map.put("firstName",userDtl.getFirstName());
+        map.put("lastName",userDtl.getLastName());
+        map.put("birthday",userDtl.getBirthday());
+        map.put("telephone",userDtl.getTelephone());
+        //地址
+        map.put("nationalName",nationalDtl.getNationalDtlName());
+        map.put("nationalCode",nationalDtl.getNationalDtlCode());
+        map.put("provinceName",provinceDtl.getProvinceDtlName());
+        map.put("cityName",cityDtl.getCityDtlName());
+        map.put("roleDesc",role.getRoleDesc());
+        return map;
     }
 }

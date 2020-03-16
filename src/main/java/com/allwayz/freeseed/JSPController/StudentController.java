@@ -7,8 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -42,6 +41,8 @@ public class StudentController {
     private EnrollmentMapper enrollmentMapper;
     @Autowired
     private AssessmentMapper assessmentMapper;
+    @Autowired
+    private ClassroomMapper classroomMapper;
 
     /**
      *
@@ -74,14 +75,37 @@ public class StudentController {
     @RequestMapping("majorResource")
     public String majorResource(HttpSession session){
         List<MajorDtl> majorDtlList = majorDtlMapper.selectList(new QueryWrapper<MajorDtl>().orderByAsc("semester_year"));
-        session.setAttribute("MajorDtlList",majorDtlList);
+        List<Map<String,String>> mapArrayList= new ArrayList<>();
+        for(MajorDtl majorDtl:majorDtlList){
+            Map<String,String> map = new HashMap<>();
+            Major major = majorMapper.selectById(majorDtl.getMajorId());
+            Classroom classroom = classroomMapper.selectById(majorDtl.getClassroomId());
+            map.put("major_Name",major.getMajorName());
+            map.put("semesterYear",String.valueOf(majorDtl.getSemesterYear()));
+            map.put("semester",majorDtl.getSemester());
+            map.put("classroom",classroom.getClassroomName());
+            map.put("createTime",majorDtl.getCreateTime().toString());
+            map.put("majorDtlId",String.valueOf(majorDtl.getMajorDtlId()));
+            mapArrayList.add(map);
+        }
+        session.setAttribute("mapList",mapArrayList);
 
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",session.getAttribute("UserEmail")));
         List<Enrollment> enrollmentList = enrollmentMapper.selectList(new QueryWrapper<Enrollment>().eq("user_id",user.getUserId()));
-        List<MajorDtl> myMajor = new ArrayList<>();
+
+        List<Map<String,String>> myMajor = new ArrayList<>();
         for(Enrollment enrollment:enrollmentList){
+            Map<String,String> stringStringMap = new HashMap<>();
             MajorDtl majorDtl = majorDtlMapper.selectById(enrollment.getMajorDtlId());
-            myMajor.add(majorDtl);
+            Major major = majorMapper.selectById(majorDtl.getMajorId());
+            Classroom classroom = classroomMapper.selectById(majorDtl.getClassroomId());
+            stringStringMap.put("major_Name",major.getMajorName());
+            stringStringMap.put("semesterYear",String.valueOf(majorDtl.getSemesterYear()));
+            stringStringMap.put("semester",majorDtl.getSemester());
+            stringStringMap.put("classroom",classroom.getClassroomName());
+            stringStringMap.put("createTime",majorDtl.getCreateTime().toString());
+            stringStringMap.put("majorDtlId",String.valueOf(majorDtl.getMajorId()));
+            myMajor.add(stringStringMap);
         }
         session.setAttribute("MyMajor",myMajor);
 
@@ -108,6 +132,7 @@ public class StudentController {
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
         List<Transcript> transcriptList = transcriptMapper.selectList(new QueryWrapper<Transcript>().eq("user_id",user.getUserId()));
         session.setAttribute("TranscriptList",transcriptList);
+
         return "StudentPage/Transcript";
     }
 
@@ -117,9 +142,9 @@ public class StudentController {
      * @param session
      * @return
      */
-    @RequestMapping("addEnrollment")
+    @PutMapping("addEnrollment/{majorDtlId}")
     @ResponseBody
-    public String addEnrollment(int majorDtlId, HttpSession session){
+    public String addEnrollment(@PathVariable(value = "majorDtlId") int majorDtlId, HttpSession session){
         logger.info(String.valueOf(majorDtlId));
         logger.info(session.getAttribute("UserEmail").toString());
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",session.getAttribute("UserEmail")));

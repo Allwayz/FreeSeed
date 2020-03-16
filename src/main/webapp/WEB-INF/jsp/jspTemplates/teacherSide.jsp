@@ -67,7 +67,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="UserInfo?email=${sessionScope.User.getUserEmail()}">
+                <a class="nav-link" href="teacherUserInfo?email=${sessionScope.User.getUserEmail()}">
                     <img src="asserts/img/user.png">
                     <span>User</span>
                 </a>
