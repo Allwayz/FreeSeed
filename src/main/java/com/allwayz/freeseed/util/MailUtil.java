@@ -1,34 +1,30 @@
 package com.allwayz.freeseed.util;
 
-import io.github.biezhi.ome.OhMyEmail;
-import io.github.biezhi.ome.SendMailException;
+import com.allwayz.freeseed.util.OhMyEmailUtil.OhMyEmail;
+import com.allwayz.freeseed.util.OhMyEmailUtil.SendMailException;
 import jetbrick.template.JetEngine;
 import jetbrick.template.JetTemplate;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
-import java.io.File;
+import javax.servlet.http.HttpSession;
 import java.io.StringWriter;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import static io.github.biezhi.ome.OhMyEmail.SMTP_QQ;
+import static com.allwayz.freeseed.util.OhMyEmailUtil.OhMyEmail.SMTP_QQ;
 
 public class MailUtil {
-    // 该邮箱修改为你需要测试的邮箱地址
-    private static final String TO_EMAIL = "374615181@qq.com";
-
-
     @Before
     public void before() {
-        // 配置，一次即可
         OhMyEmail.config(SMTP_QQ(false), "2584491610@qq.com", "bbtmcybrvxbddhic");
-        // 如果是企业邮箱则使用下面配置
-        //OhMyEmail.config(SMTP_ENT_QQ(false), "xxx@qq.com", "*******");
     }
+
+
+    // 该邮箱修改为你需要测试的邮箱地址
+    private static final String TO_EMAIL = "374615181@qq.com";
 
     /**
      *
@@ -62,7 +58,7 @@ public class MailUtil {
      * @param email
      * @throws SendMailException
      */
-    public static void sendAuthorizationCodeEmail(String email) throws SendMailException {
+    public static String sendAuthorizationCodeEmail(String email) throws SendMailException {
         JetEngine engine = JetEngine.create();
         JetTemplate template = engine.getTemplate("/templates/JetxTemplates/AuthorizationCode.jetx");
 
@@ -73,7 +69,6 @@ public class MailUtil {
         StringWriter writer = new StringWriter();
         template.render(context, writer);
         String output = writer.toString();
-        System.out.println(output);
 
         OhMyEmail.subject("FreeSeed Authorization")
                 .from("Allwayz")
@@ -81,8 +76,7 @@ public class MailUtil {
                 .html(output)
                 .send();
         Assert.assertTrue(true);
-        System.out.println(code);
-        System.out.println("Send...");
+        return code;
     }
 
     @Test
@@ -95,6 +89,7 @@ public class MailUtil {
     @Test
     public void testAuthorizationCode() throws SendMailException {
         String email = "allwayzio@126.com";
+        HttpSession session = null;
         MailUtil.sendAuthorizationCodeEmail(email);
     }
 

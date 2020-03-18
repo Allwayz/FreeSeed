@@ -64,21 +64,39 @@
 				})
 			};
 
-			function addMajorDtl(input) {
+			function majorDetailClickById(dataInput) {
+				$.ajax({
+					type: "get",
+					url: "checkMajorDtlById/"+dataInput,
+					dataType: "json",
+					success: function (data) {
+						confirm(
+								"majorName: "+data.MajorName+"\n"+
+								"majorCode: "+data.majorCode+"\n" +
+								"semesterYear: "+data.semesterYear+"\n" +
+								"semester: "+data.semester+"\n" +
+								"classroom: "+data.classroom+"\n" +
+								"updateTime: "+data.updateTime+"\n" +
+								"majorStatus: "+data.majorStatus+"\n"
+						)
+					},
+					timeout:2000,
+					sync: true
+				})
+			};
+
+			function addMajorDtl(year,semester) {
 				var r = confirm("Confirm to add a Major Dtl")
 				//TODO: can not run here
 				if(r==true){
-					// $.ajax({
-					//     url: "addMajorDtl?year="+year+"&semester="+semester+"&classroom=1&majorId="+majorId,
-					//     dataType: "json",
-					//     success: function (data) {
-					//         alert(data)
-					//     }
-					// })
-					alert(input.val())
-					//document.write("You pressed OK!")
+					$.ajax({
+					    url: "addMajorDtl?year="+$(year).val()+"&semester="+$(semester).val()+"&classroom=1&majorId="+sessionStorage.getItem("majorIdToMajorDtl"),
+					    dataType: "json",
+					    success: function (data) {
+							location.reload();
+					    }
+					})
 				}
-
 			};
 
 			function addMajor(majorDepartment,MajorName) {
@@ -94,6 +112,7 @@
 		</script>
 		<script>
 			function turn_gray(id,majorId) {
+				sessionStorage.setItem("majorIdToMajorDtl",majorId)
 				document.getElementById("netghost").style.display = "block";
 				document.getElementById("netghost").style.width = document.body.clientWidth;
 				document.getElementById("netghost").style.height = document.body.clientHeight;
@@ -295,7 +314,7 @@
 									<tr>
 										<td>${node.enrollmentId}</td>
 										<td><span style="cursor:pointer" onclick="userDetailClickById(${node.userId})">${node.userId}</span></td>
-										<td>${node.majorDtlId}</td>
+										<td><span style="cursor:pointer" onclick="majorDetailClickById(${node.majorDtlId})">${node.majorDtlId}</span></td>
 										<td>${node.createTime}</td>
 									</tr>
 								</c:forEach>
@@ -321,11 +340,10 @@
 								<option value="SS">SS</option>
 								<option value="FW">FW</option>
 							</select>
-							majorId: <span id="major_id">2</span>
 							<div>
 								<button class="btn btn-default btn-success">
 <%--									TODO: 无法传递参数--%>
-									<span onclick="addMajorDtl(this.$('#majorId'))">Confirm</span>
+									<span onclick="addMajorDtl($('#yearSelect'),$('#semesterSelect'))">Confirm</span>
 								</button>
 							</div>
 						</div>

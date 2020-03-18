@@ -5,12 +5,10 @@ import com.allwayz.freeseed.model.mapper.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,6 +33,8 @@ public class ListController {
     protected MajorDtlMapper majorDtlMapper;
     @Autowired
     private UserDtlMapper userDtlMapper;
+    @Autowired
+    private ClassroomMapper classroomMapper;
 
     /**
      *
@@ -43,7 +43,7 @@ public class ListController {
      */
     @RequestMapping("/listPage")
     public ModelAndView showUser(String table){
-        List list;
+        Collection list;
         switch (table){
             case "user":
                 list = userMapper.selectList(new QueryWrapper<User>());
@@ -84,5 +84,24 @@ public class ListController {
         map.put("cityName",cityDtl.getCityDtlName());
         map.put("roleDesc",role.getRoleDesc());
         return map;
+    }
+
+    @ResponseBody
+    @GetMapping("checkMajorDtlById/{Id}")
+    public Map<String,String> checkMajorDtlById(@PathVariable (value = "Id") int Id){
+        MajorDtl majorDtl = majorDtlMapper.selectById(Id);
+        Major major = majorMapper.selectById(majorDtl.getMajorId());
+        Classroom classroom = classroomMapper.selectById(majorDtl.getClassroomId());
+        Map<String,String> stringStringMap = new HashMap<>();
+        stringStringMap.put("MajorName",major.getMajorName());
+        stringStringMap.put("semester",majorDtl.getSemester());
+        stringStringMap.put("semesterYear",String.valueOf(majorDtl.getSemesterYear()));
+        stringStringMap.put("createTime",String.valueOf(majorDtl.getCreateTime()));
+        stringStringMap.put("updateTime",String.valueOf(majorDtl.getUpdateTime()));
+        stringStringMap.put("classroom",classroom.getClassroomName());
+        stringStringMap.put("majorCode",major.getMajorCode());
+        stringStringMap.put("majorStatus",major.getMajorStatus());
+
+        return stringStringMap;
     }
 }
